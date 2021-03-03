@@ -72,7 +72,7 @@ namespace BlazorApp1.Shared
             StringBuilder sb = new StringBuilder();
 
             //        sb.Append("< table class=\"gridtable\" width=\"75%\">");
-            sb.Append("<table class=\"gridtable\" width=\"75%\">");
+            sb.Append("<table class=\"gridtable\" width=\"85%\">");
             sb.Append("<tr><th></th><th width =\"13%\" > Topic 主題</th><th>Description 說明</th></tr>");
 
             sb.Append("<tr><th>1</th><td>作业目的<br>Operation purpose</td><td>");

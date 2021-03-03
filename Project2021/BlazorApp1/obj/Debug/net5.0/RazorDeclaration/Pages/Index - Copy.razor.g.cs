@@ -82,6 +82,20 @@ using BlazorApp1.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
+using System.Text;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
+using Microsoft.AspNetCore.Hosting;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index___Copy : Microsoft.AspNetCore.Components.ComponentBase
     {

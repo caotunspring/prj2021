@@ -90,6 +90,13 @@ using System.Text;
 #line hidden
 #nullable disable
 #nullable restore
+#line 3 "D:\Project2021\Project2021\BlazorApp1\Pages\Q090 - Copy.razor"
+using Microsoft.AspNetCore.Hosting;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "D:\Project2021\Project2021\BlazorApp1\Pages\Q090 - Copy.razor"
            [Authorize]
 
@@ -105,24 +112,20 @@ using System.Text;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 14 "D:\Project2021\Project2021\BlazorApp1\Pages\Q090 - Copy.razor"
+#line 8 "D:\Project2021\Project2021\BlazorApp1\Pages\Q090 - Copy.razor"
        
-    MarkupString strTable;
-
-
-
-  //  Ten ten;
+    MarkupString strHtml;
     protected override void OnInitialized()
     {
-        strTable = (MarkupString)Util.GetHtmlStringExt("Q100");
-
-
+        var wwwroot = WebEnvironment.WebRootPath;
+    
+        strHtml = (MarkupString)Util.GetHtmlStringExtAll(wwwroot, "Q090");
     }
-
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IWebHostEnvironment WebEnvironment { get; set; }
     }
 }
 #pragma warning restore 1591

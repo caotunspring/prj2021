@@ -1,5 +1,7 @@
-﻿using Novacode;
+﻿using Newtonsoft.Json;
+using Novacode;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -54,13 +56,12 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            //Prog2 p2 = new Prog2();
-            //p2.method1();
-
-            //return;
             string pathName = @"D:\Project2021\json\";
             string fileName = @"D:\Project2021\doc.txt";
-            M1(fileName, pathName);
+            //  M1(fileName, pathName);
+
+            M0(fileName, pathName);//所有頁面的列表
+
 
         }
 
@@ -68,6 +69,101 @@ namespace ConsoleApp1
         {
             string[] temp5 = x.Split("<br>");
             return temp5[0] + "<br>" + temp5[1];
+        }
+        static void M0(string fileName, string pathName)
+        {
+
+            Dictionary<string, string> pageDic = new Dictionary<string, string>();
+
+            List<IdName> pageList = new List<IdName>();
+
+            string pattern = @"[\d|\.]\s[S|R|Q|C|M|P]\d{3}";//@"^\d{5}$"
+            // Create a Regex  
+            Regex rg = new Regex(pattern);
+
+            Console.OutputEncoding = Encoding.UTF8;
+            int counter = 0;
+            string line;
+            //   string fileName = @"D:\Project2021\doc.txt";
+            // Read the file and display it line by line.  
+            System.IO.StreamReader file =
+                new System.IO.StreamReader(fileName);
+
+
+            int int作业目的 = 0;
+            string str作业目的 = "";
+
+            Ten ten = new Ten();
+            var sb = new StringBuilder();
+            while ((line = file.ReadLine()) != null)
+            {
+
+
+
+
+
+
+                //   System.Console.WriteLine(line);
+                MatchCollection matchedAuthors = rg.Matches(line);
+                //for (int count = 0; count < matchedAuthors.Count; count++)
+                //    Console.WriteLine(matchedAuthors[count].Value);
+                if (matchedAuthors.Count > 0)
+                {
+                    line = line.Trim();
+                    string x = line.Split(" ")[0];
+                    string id = line.Split(" ")[1];
+
+                    //Console.WriteLine(x);
+                    string strShow = "<li>" + line.Substring(x.Length).Trim() + "</li>";
+                    sb.Append(strShow);
+                    //   Console.WriteLine(strShow);
+                    pageDic.Add(id, line.Substring(x.Length).Trim());
+                    pageList.Add(new IdName { Id = id, Name = line.Substring(x.Length).Trim() });
+
+                }
+                counter++;
+            }
+
+            file.Close();
+            Console.OutputEncoding = Encoding.UTF8;
+          //  System.Console.WriteLine(sb.ToString());
+
+            System.Console.WriteLine("There were {0} lines.", counter);
+            // Suspend the screen.  
+
+            string jsonString = JsonConvert.SerializeObject(pageDic, Newtonsoft.Json.Formatting.Indented);
+           // System.Console.WriteLine(json);
+            System.IO.File.WriteAllText(pathName + "pagesDic.json", jsonString);
+
+            string jsonString2 = JsonConvert.SerializeObject(pageList);
+            // System.Console.WriteLine(json);
+            System.IO.File.WriteAllText(pathName + "pagesList.json", jsonString2);
+
+
+
+            return;
+            //try
+            //{
+            //    // Open the text file using a stream reader.
+            //    using (var sr = new StreamReader(@"D:\Project2021\doc.txt"))
+            //    {
+            //        // Read the stream as a string, and write the string to the console.
+            //     //   Console.WriteLine(sr.ReadToEnd());
+            //        int k = 0;
+            //        foreach (var line in sr.ReadToEnd())
+
+            //        {
+            //            k++;
+            //            if (k > 10) break;
+            //            Console.WriteLine(line);
+            //        }
+            //    }
+            //}
+            //catch (IOException e)
+            //{
+            //    Console.WriteLine("The file could not be read:");
+            //    Console.WriteLine(e.Message);
+            //}
         }
 
         static void M1(string fileName, string pathName)
@@ -287,7 +383,7 @@ namespace ConsoleApp1
                         var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(ten);
                         Console.WriteLine(id);
                         Console.WriteLine(jsonString);
-                        System.IO.File.WriteAllText(pathName+ten.id+".json", jsonString);
+                        System.IO.File.WriteAllText(pathName + ten.id + ".json", jsonString);
                     }
 
                     ten = new Ten();

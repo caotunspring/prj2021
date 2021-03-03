@@ -131,3 +131,7 @@ D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\Q0
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\Q090.razor.g.cs
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\Q000Head.razor.g.cs
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\Q090.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\Q080.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\Q080.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\PageList.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\PageList.razor.g.cs
