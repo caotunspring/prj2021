@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,53 @@ namespace BlazorApp1.Shared
 {
     public class Util
     {
+
+        public static string GetHtmlStringExtAll(string wwwroot,string id)
+        {
+            var file = wwwroot + "/json/" + id + ".json";
+            string result = "";
+            if (File.Exists(file))
+            {
+                try
+                {
+                    string jsonString = System.IO.File.ReadAllText(file);
+                    var ten = Newtonsoft.Json.JsonConvert.DeserializeObject<Ten>(jsonString);
+                    var temp = GetHtmlString(ten);
+                    result = "<br />" + temp + "<br />";
+
+                }
+                catch(Exception ex)
+                {
+                    //
+                    var msg = ex.Message;
+                }
+            }
+            var img1 = wwwroot + "/img/" + id + ".png";
+            var img2 = wwwroot + "/img/" + id + "-2.png";
+            var img3 = wwwroot + "/img/" + id + "-3.png";
+
+
+            if (File.Exists(img1))
+            {
+                result += String.Format("<img src=\"img/{0}\" />", id + ".png");
+            }
+            if (File.Exists(img2))
+            {
+                result += String.Format("<img src=\"img/{0}\" />", id + "-2.png");
+            }
+            if (File.Exists(img3))
+            {
+                result += String.Format("<img src=\"img/{0}\" />", id + "-3.png");
+            }
+
+
+            return result;
+
+           
+        }
+
+
+
         public static string GetHtmlStringExt(string id)
         {
             string jsonString = System.IO.File.ReadAllText(@"D:\Project2021\Project2021\BlazorApp1\wwwroot\json\"+id+".json");

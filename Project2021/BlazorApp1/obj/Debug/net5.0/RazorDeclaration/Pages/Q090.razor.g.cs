@@ -90,6 +90,13 @@ using System.Text;
 #line hidden
 #nullable disable
 #nullable restore
+#line 3 "D:\Project2021\Project2021\BlazorApp1\Pages\Q090.razor"
+using Microsoft.AspNetCore.Hosting;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "D:\Project2021\Project2021\BlazorApp1\Pages\Q090.razor"
            [Authorize]
 
@@ -105,26 +112,20 @@ using System.Text;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 7 "D:\Project2021\Project2021\BlazorApp1\Pages\Q090.razor"
+#line 8 "D:\Project2021\Project2021\BlazorApp1\Pages\Q090.razor"
        
     MarkupString strHtml;
     protected override void OnInitialized()
     {
-        var sb = new StringBuilder();
-        sb.Append("<br />");
-        sb.Append(Util.GetHtmlStringExt("Q100"));
-        sb.Append("<br />");
-
-        // NOTE by Mark陳炳陵, 這個可以判斷 wwwroot/img 是否有 Q090, 然後自動加入
-        sb.Append(String.Format("<img src=\"img/{0}\" />", "Q090.png"));
-        sb.Append(String.Format("<img src=\"img/{0}\" />", "Q090-2.png"));
-
-        strHtml = (MarkupString)sb.ToString();
+        var wwwroot = WebEnvironment.WebRootPath;
+    
+        strHtml = (MarkupString)Util.GetHtmlStringExtAll(wwwroot, "Q090");
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IWebHostEnvironment WebEnvironment { get; set; }
     }
 }
 #pragma warning restore 1591

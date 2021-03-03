@@ -1,6 +1,7 @@
 ﻿@page "/Q090"
 @attribute [Authorize]
-
+@using Microsoft.AspNetCore.Hosting;
+@inject IWebHostEnvironment WebEnvironment;
 <Q000Head Title="Q090 Location Usage Status Query 库位使用状态查询"></Q000Head>
 @strHtml
 
@@ -8,16 +9,9 @@
     MarkupString strHtml;
     protected override void OnInitialized()
     {
-        var sb = new StringBuilder();
-        sb.Append("<br />");
-        sb.Append(Util.GetHtmlStringExt("Q100"));
-        sb.Append("<br />");
-
-        // NOTE by Mark陳炳陵, 這個可以判斷 wwwroot/img 是否有 Q090, 然後自動加入
-        sb.Append(String.Format("<img src=\"img/{0}\" />", "Q090.png"));
-        sb.Append(String.Format("<img src=\"img/{0}\" />", "Q090-2.png"));
-
-        strHtml = (MarkupString)sb.ToString();
+        var wwwroot = WebEnvironment.WebRootPath;
+    
+        strHtml = (MarkupString)Util.GetHtmlStringExtAll(wwwroot, "Q090");
     }
 }
 
