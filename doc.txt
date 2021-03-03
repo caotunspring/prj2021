@@ -1794,7 +1794,7 @@ Not applicable
 Remark
 可以查看回报SAP状态
 You can view and report SAP status
-Q120 Posting Change Transfer Query库存属性移转查询
+8.12. Q120 Posting Change Transfer Query库存属性移转查询
 
 
 

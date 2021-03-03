@@ -11,3 +11,14 @@ D:\Project2021\Project2021\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.cspro
 D:\Project2021\Project2021\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
 D:\Project2021\Project2021\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
 D:\Project2021\Project2021\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.genruntimeconfig.cache
+D:\Project2021\Project2021\ConsoleApp1\bin\Debug\netcoreapp3.1\DocXCore.dll
+D:\Project2021\Project2021\ConsoleApp1\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Project2021\Project2021\ConsoleApp1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\Project2021\Project2021\ConsoleApp1\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+D:\Project2021\Project2021\ConsoleApp1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Project2021\Project2021\ConsoleApp1\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+D:\Project2021\Project2021\ConsoleApp1\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll
+D:\Project2021\Project2021\ConsoleApp1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\Microsoft.Win32.SystemEvents.dll
+D:\Project2021\Project2021\ConsoleApp1\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
+D:\Project2021\Project2021\ConsoleApp1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
+D:\Project2021\Project2021\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CopyComplete
