@@ -8,6 +8,17 @@ namespace BlazorApp1.Shared
 {
     public class Util
     {
+        public static string GetHtmlStringExt(string id)
+        {
+            string jsonString = System.IO.File.ReadAllText(@"D:\Project2021\Project2021\BlazorApp1\wwwroot\json\"+id+".json");
+
+
+            var ten = Newtonsoft.Json.JsonConvert.DeserializeObject<Ten>(jsonString);
+
+            return GetHtmlString(ten);
+        }
+
+
         public static string GetHtmlString(Ten ten)
         {
             StringBuilder sb = new StringBuilder();
