@@ -1,5 +1,40 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+<style >
+table.gridtable {
+    font-family: verdana, arial, sans-serif;
+    /*font-size: 88%;*/
+    /*color:#333333;*/
+    color: black;
+    border-width: 1px;
+    /*border-color: #666666;*/
+    border-color: #666666;
+    border-collapse: collapse;
+}
 
+table.gridtable th {
+    font-size: 95%;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    /*border-color: #666666;*/
+    border-color: #666666;
+    background-color: #dedede;
+}
+
+table.gridtable td {
+    font-size: 95%;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    /*border-color: #666666;*/
+    border-color: #666666;
+    background-color: #ffffff;
+}
+
+</style >
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
