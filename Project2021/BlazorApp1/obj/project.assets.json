@@ -1537,6 +1537,15 @@
           "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "System.Web.Mvc.Extensions/1.1.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Web.Mvc.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Web.Mvc.Extensions.dll": {}
+        }
+      },
       "System.Windows.Extensions/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -5857,6 +5866,21 @@
         "system.threading.tasks.extensions.nuspec"
       ]
     },
+    "System.Web.Mvc.Extensions/1.1.1.2": {
+      "sha512": "A8+X7EW9un/RedIBhpA/LMSvWw8iaEa9mJt0nvcFYQM2F1CoggZp6e7c50CIDfL6g5/105u7Q/QO8m7EUGtL9A==",
+      "type": "package",
+      "path": "system.web.mvc.extensions/1.1.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/System.Web.Mvc.Extensions.dll",
+        "lib/net40/System.Web.Mvc.Extensions.xml",
+        "lib/net45/System.Web.Mvc.Extensions.dll",
+        "lib/net45/System.Web.Mvc.Extensions.xml",
+        "system.web.mvc.extensions.1.1.1.2.nupkg.sha512",
+        "system.web.mvc.extensions.nuspec"
+      ]
+    },
     "System.Windows.Extensions/4.7.0": {
       "sha512": "CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "type": "package",
@@ -6137,7 +6161,8 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.3",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.3",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.3"
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.3",
+      "System.Web.Mvc.Extensions >= 1.1.1.2"
     ]
   },
   "packageFolders": {
@@ -6209,6 +6234,10 @@
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
             "version": "[5.0.3, )"
+          },
+          "System.Web.Mvc.Extensions": {
+            "target": "Package",
+            "version": "[1.1.1.2, )"
           }
         },
         "imports": [
@@ -6232,5 +6261,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Web.Mvc.Extensions 1.1.1.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "System.Web.Mvc.Extensions",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

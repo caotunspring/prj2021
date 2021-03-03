@@ -83,6 +83,13 @@ using BlazorApp1.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
+using System.Text;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "D:\Project2021\Project2021\BlazorApp1\Pages\C000.razor"
            [Authorize]
 

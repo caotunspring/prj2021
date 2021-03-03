@@ -120,3 +120,8 @@ D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\Co
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\Conf.razor.g.cs
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\Requirement.razor.g.cs
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\Requirement.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\Q120.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\Q120.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\bin\Debug\net5.0\System.Web.Mvc.Extensions.dll
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\Q110.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\Q110.razor.g.cs

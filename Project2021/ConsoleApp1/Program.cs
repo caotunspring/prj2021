@@ -64,7 +64,11 @@ namespace ConsoleApp1
 
         }
 
-
+        static string FixExtra(string x)
+        {
+            string[] temp5 = x.Split("<br>");
+            return temp5[0] + "<br>" + temp5[1];
+        }
 
         static void M1(string fileName, string pathName)
         {
@@ -264,6 +268,21 @@ namespace ConsoleApp1
 
                     if (ten.intItem1 > 0)
                     {
+
+
+                        // 5 to 9 , need to fix 
+                        // extra  输出 < br >
+                        //    库存信息的查询条件<br> Query conditions for inventory information< br > 输出 < br >
+
+                        //string[] temp5 = ten.item5.Split("<br>");
+                        //ten.item5 = temp5[0] + "<br>" + temp5[1];
+
+                        ten.item5 = FixExtra(ten.item5);
+                        ten.item6 = FixExtra(ten.item6);
+                        ten.item7 = FixExtra(ten.item7);
+                        ten.item8 = FixExtra(ten.item8);
+                        ten.item9 = FixExtra(ten.item9);
+
 
                         var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(ten);
                         Console.WriteLine(id);
