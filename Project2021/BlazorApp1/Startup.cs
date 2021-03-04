@@ -41,6 +41,7 @@ namespace BlazorApp1
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddSingleton<WeatherForecastService>();
+            services.AddSingleton<PageService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

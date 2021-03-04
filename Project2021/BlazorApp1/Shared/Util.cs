@@ -37,7 +37,31 @@ namespace BlazorApp1.Shared
             return result;
         }
 
-            public static string GetHtmlStringExtAll(string wwwroot,string id)
+
+        private static List<IdName> GetPageList(string wwwroot, string cat)
+        {
+            var file = wwwroot + "/json/pagesList.json";
+           // string result = id;
+            if (File.Exists(file))
+            {
+                try
+                {
+                    string jsonString = System.IO.File.ReadAllText(file);
+                    var x = Newtonsoft.Json.JsonConvert.DeserializeObject<List<IdName>>(jsonString);
+                    var x2 = x.Where(o => o.Id.StartsWith(cat)).ToList();
+                    return x2;
+
+                }
+                catch (Exception ex)
+                {
+                    //
+                    var msg = ex.Message;
+                }
+            }
+            return new List<IdName>();
+        }
+
+        public static string GetHtmlStringExtAll(string wwwroot,string id)
         {
             var file = wwwroot + "/json/" + id + ".json";
             string result = "";

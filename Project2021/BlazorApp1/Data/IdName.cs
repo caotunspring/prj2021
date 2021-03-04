@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlazorApp1
 {
-    class IdName
+    public class IdName
     {
         public string Id { get; set; }
         public string Name { get; set; }

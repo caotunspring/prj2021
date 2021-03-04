@@ -111,6 +111,13 @@ using Microsoft.AspNetCore.Hosting;
 #line hidden
 #nullable disable
 #nullable restore
+#line 8 "D:\Project2021\Project2021\BlazorApp1\Pages\Q000.razor"
+using BlazorApp1.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 4 "D:\Project2021\Project2021\BlazorApp1\Pages\Q000.razor"
            [Authorize]
 
@@ -127,13 +134,15 @@ using Microsoft.AspNetCore.Hosting;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "D:\Project2021\Project2021\BlazorApp1\Pages\Q000.razor"
+#line 56 "D:\Project2021\Project2021\BlazorApp1\Pages\Q000.razor"
        
     [Parameter]
     public string Id { get; set; }
 
     public string PageTitle { get; set; }
 
+
+    public List<IdName> PageList;
 
     public string NO_PARAMETER = "LIST";
     public string StrId { get; set; }
@@ -162,7 +171,13 @@ using Microsoft.AspNetCore.Hosting;
 
         //            strHtml = (MarkupString)Util.GetHtmlStringExtAll(wwwroot, "Q080");
         strHtml = (MarkupString)Util.GetHtmlStringExtAll(wwwroot, StrId);
-        PageTitle = Util.GetPageTitle(wwwroot, StrId);
+
+        //        PageTitle = Util.GetPageTitle(wwwroot, StrId);
+        PageTitle = pageService.GetPageTitle(StrId);
+        PageList = pageService.GetPageList("Q");
+
+
+
 
     }
 
@@ -172,6 +187,7 @@ using Microsoft.AspNetCore.Hosting;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private PageService pageService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IWebHostEnvironment WebEnvironment { get; set; }
     }
 }

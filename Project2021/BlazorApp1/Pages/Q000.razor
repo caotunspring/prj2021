@@ -5,11 +5,25 @@
 @using Microsoft.AspNetCore.Hosting;
 @inject IWebHostEnvironment WebEnvironment;
 
+@using BlazorApp1.Data
+@inject PageService pageService;
+
 @if (@StrId == null)
 {
+
+
     <h3> <a href="/"> <span class="oi oi-home" aria-hidden="true"></span></a> -   <span class="oi oi-list" aria-hidden="true"></span> Q000 Data Inquire 数据查询</h3>
     <ul>
-        <li><a href="/Q000/Q080">Q080 Inventory Data Query 库存数据查询</a></li>
+        @if (@PageList != null)
+        {
+            @foreach (var item in @PageList)
+            {
+                <li><a href="/Q000/@item.Id">  @item.Name</a></li>
+            }
+
+        }
+
+        @*<li><a href="/Q000/Q080">Q080 Inventory Data Query 库存数据查询</a></li>
         <li><a href="/Q000/Q090">Q090 Location Usage Status Query 库位使用状态查询</a></li>
         <li><a href="/Q000/Q100">Q100 Location Status Query 库位状态查询</a></li>
         <li><a href="/Q000/Q110">Q110 Bin to Bin Transfer Query 转储记录数据查询</a></li>
@@ -27,7 +41,7 @@
         <li><a href="Q090">Q090 Location Usage Status Query 库位使用状态查询</a></li>
         <li><a href="Q100">Q100 Location Status Query 库位状态查询</a></li>
         <li><a href="Q110">Q110 Bin to Bin Transfer Query 转储记录数据查询</a></li>
-        <li><a href="Q120">Q120 Posting Change Transfer Query库存属性移转查询</a></li>
+        <li><a href="Q120">Q120 Posting Change Transfer Query库存属性移转查询</a></li>*@
     </ul>
 }
 else
@@ -45,6 +59,8 @@ else
 
     public string PageTitle { get; set; }
 
+
+    public List<IdName> PageList;
 
     public string NO_PARAMETER = "LIST";
     public string StrId { get; set; }
@@ -73,7 +89,13 @@ else
 
         //            strHtml = (MarkupString)Util.GetHtmlStringExtAll(wwwroot, "Q080");
         strHtml = (MarkupString)Util.GetHtmlStringExtAll(wwwroot, StrId);
-        PageTitle = Util.GetPageTitle(wwwroot, StrId);
+
+        //        PageTitle = Util.GetPageTitle(wwwroot, StrId);
+        PageTitle = pageService.GetPageTitle(StrId);
+        PageList = pageService.GetPageList("Q");
+
+
+
 
     }
 
