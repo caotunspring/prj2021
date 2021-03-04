@@ -141,7 +141,7 @@ using BlazorApp1.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 141 "D:\Project2021\Project2021\BlazorApp1\Pages\Doc3.razor"
+#line 171 "D:\Project2021\Project2021\BlazorApp1\Pages\Doc3.razor"
       
     string selectedTab = "profile";
 
@@ -151,7 +151,7 @@ using BlazorApp1.Data;
         //if (name != "SELECTED")
         //{
         //    NavigationManager.NavigateTo("/doc3");
-        //    UpdateData();
+        //  //  UpdateData();
 
         //}
 
@@ -172,7 +172,14 @@ using BlazorApp1.Data;
     public List<IdName> PageListS;
 
     public string NO_PARAMETER = "LIST";
+
     public string StrId { get; set; }
+    public string StrIdC { get; set; }
+    public string StrIdM { get; set; }
+    public string StrIdP { get; set; }
+    public string StrIdQ { get; set; }
+    public string StrIdR { get; set; }
+    public string StrIdS { get; set; }
 
     MarkupString strHtml;
     protected override void OnInitialized()
@@ -195,10 +202,37 @@ using BlazorApp1.Data;
         {
             StrId = Id;
             //    selectedTab = "SELECTED";
+            StrIdC = null;
+            StrIdM = null;
+            StrIdP = null;
+            StrIdQ = null;
+            StrIdR = null;
+            StrIdS = null;
+
+
+
+            if (Id.StartsWith("C")) StrIdC = Id;
+            if (Id.StartsWith("M")) StrIdM = Id;
+            if (Id.StartsWith("P")) StrIdP = Id;
+            if (Id.StartsWith("Q")) StrIdQ = Id;
+            if (Id.StartsWith("R")) StrIdR = Id;
+            if (Id.StartsWith("S")) StrIdS = Id;
+
+
+
         }
         else
         {
             StrId = null;
+            StrIdC = Id;
+            StrIdM = Id;
+            StrIdP = Id;
+            StrIdQ = Id;
+            StrIdR = Id;
+            StrIdS = Id;
+
+
+
         }
         StateHasChanged();
         var wwwroot = WebEnvironment.WebRootPath;
