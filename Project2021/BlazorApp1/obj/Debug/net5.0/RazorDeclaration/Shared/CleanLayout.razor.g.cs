@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazorApp1.Pages
+namespace BlazorApp1.Shared
 {
     #line hidden
     using System;
@@ -90,6 +90,13 @@ using System.Text;
 #line hidden
 #nullable disable
 #nullable restore
+#line 13 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
+using Microsoft.AspNetCore.Hosting;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 15 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
 using Newtonsoft.Json;
 
@@ -103,44 +110,13 @@ using System.IO;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "D:\Project2021\Project2021\BlazorApp1\Pages\Q080.razor"
-using Microsoft.AspNetCore.Hosting;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 2 "D:\Project2021\Project2021\BlazorApp1\Pages\Q080.razor"
-           [Authorize]
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/Q080")]
-    public partial class Q080 : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class CleanLayout : LayoutComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 8 "D:\Project2021\Project2021\BlazorApp1\Pages\Q080.razor"
-       
-    MarkupString strHtml;
-
-    protected override void OnInitialized()
-    {
-        var wwwroot = WebEnvironment.WebRootPath;
-    
-        strHtml = (MarkupString)Util.GetHtmlStringExtAll(wwwroot, "Q080");
-    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IWebHostEnvironment WebEnvironment { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -10,7 +10,34 @@ namespace BlazorApp1.Shared
     public class Util
     {
 
-        public static string GetHtmlStringExtAll(string wwwroot,string id)
+        public static string GetPageTitle(string wwwroot, string id)
+        {
+            var file = wwwroot + "/json/pagesList.json";
+            string result = id;
+            if (File.Exists(file))
+            {
+                try
+                {
+                    string jsonString = System.IO.File.ReadAllText(file);
+                    var x = Newtonsoft.Json.JsonConvert.DeserializeObject<List<IdName>>(jsonString);
+                    var x2 = x.Where(o => o.Id == id).FirstOrDefault();
+                    if (x2 !=null )
+                    {
+                        result = x2.Name;
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    //
+                    var msg = ex.Message;
+                }
+            }
+            return result;
+        }
+
+            public static string GetHtmlStringExtAll(string wwwroot,string id)
         {
             var file = wwwroot + "/json/" + id + ".json";
             string result = "";
@@ -37,7 +64,7 @@ namespace BlazorApp1.Shared
 
             if (File.Exists(img1))
             {
-                result += String.Format("<img src=\"img/{0}\" />", id + ".png");
+                result += String.Format("<img src=\"img/{0}\" width=\"100%\"/>", id + ".png");
             }
             if (File.Exists(img2))
             {

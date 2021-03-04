@@ -90,13 +90,6 @@ using System.Text;
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
-using Microsoft.AspNetCore.Hosting;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 15 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
 using Newtonsoft.Json;
 
@@ -111,13 +104,21 @@ using System.IO;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\Project2021\Project2021\BlazorApp1\Pages\Q000.razor"
+#line 5 "D:\Project2021\Project2021\BlazorApp1\Pages\Q000.razor"
+using Microsoft.AspNetCore.Hosting;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "D:\Project2021\Project2021\BlazorApp1\Pages\Q000.razor"
            [Authorize]
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/Q000")]
+    [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(CleanLayout))]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Q000/{id?}")]
     public partial class Q000 : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -125,6 +126,53 @@ using System.IO;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 42 "D:\Project2021\Project2021\BlazorApp1\Pages\Q000.razor"
+       
+    [Parameter]
+    public string Id { get; set; }
+
+    public string PageTitle { get; set; }
+
+
+    public string NO_PARAMETER = "LIST";
+    public string StrId { get; set; }
+
+    MarkupString strHtml;
+    protected override void OnInitialized()
+    {
+
+
+
+    }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        var x = Id;
+
+        if (Id != null)
+        {
+            StrId = Id;
+        }
+        else
+        {
+            StrId = null;
+        }
+        StateHasChanged();
+        var wwwroot = WebEnvironment.WebRootPath;
+
+        //            strHtml = (MarkupString)Util.GetHtmlStringExtAll(wwwroot, "Q080");
+        strHtml = (MarkupString)Util.GetHtmlStringExtAll(wwwroot, StrId);
+        PageTitle = Util.GetPageTitle(wwwroot, StrId);
+
+    }
+
+
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IWebHostEnvironment WebEnvironment { get; set; }
     }
 }
 #pragma warning restore 1591
