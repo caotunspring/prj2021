@@ -1,6 +1,6 @@
 ﻿
 @layout CleanLayout
-@page "/PageList/{id?}"
+@page "/doc/{id?}"
 @attribute [Authorize]
 @using Microsoft.AspNetCore.Hosting;
 @inject IWebHostEnvironment WebEnvironment;
@@ -12,13 +12,13 @@
 {
 
 
-    <h3> <a href="/"> <span class="oi oi-home" aria-hidden="true"></span></a> -  <span class="oi oi-list" aria-hidden="true"></span> Program List </h3>
+    <h3> <a href="/"> <span class="oi oi-home" aria-hidden="true"></span></a> -  <span class="oi oi-list" aria-hidden="true"></span> Doc List 文檔列表 </h3>
     <ul>
         @if (@PageList != null)
         {
             @foreach (var item in @PageList)
             {
-                <li><a href="/PageList/@item.Id">  @item.Name</a></li>
+                <li><a href="/doc/@item.Id">  @item.Name</a></li>
             }
 
         }

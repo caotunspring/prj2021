@@ -1,15 +1,30 @@
 ﻿@page "/"
-<h3><span class="oi oi-home" aria-hidden="true"></span> Program List 程序清單</h3>
-<ul>
-    <li>   <span class="oi oi-project" aria-hidden="true"></span> <a href="P000">P000 Process Executing 流程执行</a></li>
-    <li>  <span class="oi oi-data-transfer-download" aria-hidden="true"></span> <a href="M000">M000 Data Maintenance 数据维护</a></li>
-    <li>  <span class="oi oi-magnifying-glass" aria-hidden="true"></span> <a href="C000">C000 Physical Inventory Count 库存盘点</a></li>
-    <li>  <span class="oi oi-list" aria-hidden="true"></span> <a href="Q000">Q000 Data Inquire 数据查询</a></li>
-    <li>  <span class="oi oi-list-rich" aria-hidden="true"></span> <a href="R000">R000 Report 报表</a></li>
-    <li>  <span class="oi oi-cog" aria-hidden="true"></span> <a href="S000">S000 System Setting 系统设定</a></li>
-</ul>
+@*<h3><span class="oi oi-home" aria-hidden="true"></span> Program List 程序清單</h3>
+    <ul>
+        <li>   <span class="oi oi-project" aria-hidden="true"></span> <a href="P000">P000 Process Executing 流程执行</a></li>
+        <li>  <span class="oi oi-data-transfer-download" aria-hidden="true"></span> <a href="M000">M000 Data Maintenance 数据维护</a></li>
+        <li>  <span class="oi oi-magnifying-glass" aria-hidden="true"></span> <a href="C000">C000 Physical Inventory Count 库存盘点</a></li>
+        <li>  <span class="oi oi-list" aria-hidden="true"></span> <a href="Q000">Q000 Data Inquire 数据查询</a></li>
+        <li>  <span class="oi oi-list-rich" aria-hidden="true"></span> <a href="R000">R000 Report 报表</a></li>
+        <li>  <span class="oi oi-cog" aria-hidden="true"></span> <a href="S000">S000 System Setting 系统设定</a></li>
+    </ul>*@
+<h1><span class="oi oi-home" aria-hidden="true"></span> Home Page</h1>
+<br />
+<AuthorizeView>
+    <Authorized>
+        <h3><a href="doc"> Doc List 文檔列表</a></h3>
+        <h3><a href="doc2"> Doc 2 ...DOING NavMenu</a></h3>
+        <h3><a href="doc3"> Doc 3 ...Tab</a></h3>
 
-<h3><a href="PageList"><span class="oi oi-home" aria-hidden="true"></span> Program List 程序清單, 不分組</a></h3>
+    </Authorized>
+    <NotAuthorized>
+        <h3>Please Sign In to Start!</h3>
+        <p>You're not signed in.</p>
+    </NotAuthorized>
+</AuthorizeView>
+
+
+
 
 @*<h3>不分組</h3>
     <ol>

@@ -101,6 +101,13 @@ using System.IO;
 #line hidden
 #nullable disable
 #nullable restore
+#line 18 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
+using Blazorise;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 5 "D:\Project2021\Project2021\BlazorApp1\Pages\Q000.razor"
 using Microsoft.AspNetCore.Hosting;
 

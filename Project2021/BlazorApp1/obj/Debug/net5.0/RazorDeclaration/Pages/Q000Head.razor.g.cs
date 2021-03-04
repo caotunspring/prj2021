@@ -110,6 +110,13 @@ using System.IO;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 18 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
+using Blazorise;
+
+#line default
+#line hidden
+#nullable disable
     public partial class Q000Head : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

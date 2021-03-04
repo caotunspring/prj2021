@@ -104,29 +104,36 @@ using System.IO;
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\Project2021\Project2021\BlazorApp1\Pages\PageListV2.razor"
+#line 18 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
+using Blazorise;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "D:\Project2021\Project2021\BlazorApp1\Pages\Doc.razor"
 using Microsoft.AspNetCore.Hosting;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\Project2021\Project2021\BlazorApp1\Pages\PageListV2.razor"
+#line 8 "D:\Project2021\Project2021\BlazorApp1\Pages\Doc.razor"
 using BlazorApp1.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\Project2021\Project2021\BlazorApp1\Pages\PageListV2.razor"
+#line 4 "D:\Project2021\Project2021\BlazorApp1\Pages\Doc.razor"
            [Authorize]
 
 #line default
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(CleanLayout))]
-    [Microsoft.AspNetCore.Components.RouteAttribute("/PageList/{id?}")]
-    public partial class PageListV2 : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/doc/{id?}")]
+    public partial class Doc : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -134,7 +141,7 @@ using BlazorApp1.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 56 "D:\Project2021\Project2021\BlazorApp1\Pages\PageListV2.razor"
+#line 56 "D:\Project2021\Project2021\BlazorApp1\Pages\Doc.razor"
        
     [Parameter]
     public string Id { get; set; }
