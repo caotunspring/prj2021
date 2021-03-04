@@ -96,6 +96,27 @@ using Microsoft.AspNetCore.Hosting;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 15 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 16 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 18 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
+using Blazorise;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index___Copy : Microsoft.AspNetCore.Components.ComponentBase
     {

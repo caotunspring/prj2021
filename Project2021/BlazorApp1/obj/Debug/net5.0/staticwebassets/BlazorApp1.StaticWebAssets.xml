@@ -3,4 +3,5 @@
   <ContentRoot BasePath="/Identity" Path="C:\Users\user\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.3\staticwebassets\V4\" />
   <ContentRoot BasePath="_content/Blazorise" Path="C:\Users\user\.nuget\packages\blazorise\0.9.3\build\..\staticwebassets\" />
   <ContentRoot BasePath="_content/Blazorise.Bootstrap" Path="C:\Users\user\.nuget\packages\blazorise.bootstrap\0.9.3\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Blazorise.TreeView" Path="C:\Users\user\.nuget\packages\blazorise.treeview\0.9.3\build\..\staticwebassets\" />
 </StaticWebAssets>

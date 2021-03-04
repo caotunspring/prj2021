@@ -111,6 +111,13 @@ using Blazorise;
 #line hidden
 #nullable disable
 #nullable restore
+#line 19 "D:\Project2021\Project2021\BlazorApp1\_Imports.razor"
+using Blazorise.TreeView;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 6 "D:\Project2021\Project2021\BlazorApp1\Pages\Doc3.razor"
 using Microsoft.AspNetCore.Hosting;
 
@@ -134,7 +141,7 @@ using BlazorApp1.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 115 "D:\Project2021\Project2021\BlazorApp1\Pages\Doc3.razor"
+#line 141 "D:\Project2021\Project2021\BlazorApp1\Pages\Doc3.razor"
       
     string selectedTab = "profile";
 
@@ -187,7 +194,7 @@ using BlazorApp1.Data;
         if (Id != null)
         {
             StrId = Id;
-        //    selectedTab = "SELECTED";
+            //    selectedTab = "SELECTED";
         }
         else
         {
@@ -209,7 +216,7 @@ using BlazorApp1.Data;
         PageListQ = pageService.GetPageList("Q");
         PageListR = pageService.GetPageList("R");
         PageListS = pageService.GetPageList("S");
-     //   StateHasChanged();
+        //   StateHasChanged();
 
 
 

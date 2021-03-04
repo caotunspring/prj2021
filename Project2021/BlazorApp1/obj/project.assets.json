@@ -62,6 +62,26 @@
           "lib/net5.0/Blazorise.Icons.FontAwesome.dll": {}
         }
       },
+      "Blazorise.TreeView/0.9.3": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "0.9.3",
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.TreeView.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.TreeView.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazorise.TreeView.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.TreeView.props": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -1890,6 +1910,25 @@
         "blazorise.icons.fontawesome.0.9.3.nupkg.sha512",
         "blazorise.icons.fontawesome.nuspec",
         "lib/net5.0/Blazorise.Icons.FontAwesome.dll"
+      ]
+    },
+    "Blazorise.TreeView/0.9.3": {
+      "sha512": "9Khhk9iF4xEhnMjIwjaiHSdBWUHV0OXK3xkwl2DKYgtqfptP+iXdQKx9jmASkzTWF0a3xE1M9dsbC5Wk1yAOfQ==",
+      "type": "package",
+      "path": "blazorise.treeview/0.9.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.treeview.0.9.3.nupkg.sha512",
+        "blazorise.treeview.nuspec",
+        "build/Blazorise.TreeView.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.TreeView.props",
+        "buildTransitive/Blazorise.TreeView.props",
+        "lib/net5.0/Blazorise.TreeView.dll",
+        "staticwebassets/blazorise.treeview.css"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -6511,6 +6550,7 @@
     "net5.0": [
       "Blazorise.Bootstrap >= 0.9.3",
       "Blazorise.Icons.FontAwesome >= 0.9.3",
+      "Blazorise.TreeView >= 0.9.3",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.3",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.3",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.3",
@@ -6576,6 +6616,10 @@
             "version": "[0.9.3, )"
           },
           "Blazorise.Icons.FontAwesome": {
+            "target": "Package",
+            "version": "[0.9.3, )"
+          },
+          "Blazorise.TreeView": {
             "target": "Package",
             "version": "[0.9.3, )"
           },

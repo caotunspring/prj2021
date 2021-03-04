@@ -147,3 +147,6 @@ D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\Doc3.razor.g.
 D:\Project2021\Project2021\BlazorApp1\bin\Debug\net5.0\Blazorise.dll
 D:\Project2021\Project2021\BlazorApp1\bin\Debug\net5.0\Blazorise.Bootstrap.dll
 D:\Project2021\Project2021\BlazorApp1\bin\Debug\net5.0\Blazorise.Icons.FontAwesome.dll
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\Tree.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\bin\Debug\net5.0\Blazorise.TreeView.dll
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\Tree.razor.g.cs

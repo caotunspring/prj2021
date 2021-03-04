@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "l5jHQZsT/KEY9PInRy67oP9uk8Hk/91DfXB7IxVSiC+1vEMg+fHGYQzP+V4w11h/nF3mtdgDyQSbEeoOOw1AxQ==",
+  "dgSpecHash": "qcBG2kXKhKRf4uTGPJ0nk5wahknT2WoLeaq8DxO1u5HGavGU4EsGGM/mI9dWQ6e4IGdO97jNm6OrL2OIziAe8g==",
   "success": true,
   "projectFilePath": "D:\\Project2021\\Project2021\\BlazorApp1\\BlazorApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\blazorise\\0.9.3\\blazorise.0.9.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\blazorise.bootstrap\\0.9.3\\blazorise.bootstrap.0.9.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\blazorise.icons.fontawesome\\0.9.3\\blazorise.icons.fontawesome.0.9.3.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\blazorise.treeview\\0.9.3\\blazorise.treeview.0.9.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.0\\microsoft.aspnetcore.authorization.5.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.0\\microsoft.aspnetcore.components.5.0.0.nupkg.sha512",
