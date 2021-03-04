@@ -138,7 +138,7 @@ namespace BlazorApp1.Shared
             sb.Append(ten.item3);
             sb.Append("</td></tr>");
 
-            sb.Append("<tr><th>4</th><td>前置条件<br>Precondition/td><td>");
+            sb.Append("<tr><th>4</th><td>前置条件<br>Precondition</td><td>");
             sb.Append(ten.item4);
             sb.Append("</td></tr>");
 
