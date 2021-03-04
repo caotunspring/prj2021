@@ -58,9 +58,14 @@ namespace ConsoleApp1
 
             string pathName = @"D:\Project2021\json\";
             string fileName = @"D:\Project2021\doc.txt";
+
+            string pathName2 = @"D:\Project2021\json2\";
+            string fileName2 = @"D:\Project2021\doc2.txt";
+
             //  M1(fileName, pathName);
 
-            M0(fileName, pathName);//所有頁面的列表
+          //  M0(fileName, pathName);//所有頁面的列表
+            M1(fileName2, pathName2);//所有頁面的列表
 
 
         }

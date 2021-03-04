@@ -110,7 +110,7 @@ using System.IO;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/PageList")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/xxxPageList")]
     public partial class PageList : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
