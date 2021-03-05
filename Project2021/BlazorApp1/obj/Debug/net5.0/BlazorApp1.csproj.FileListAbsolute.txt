@@ -158,3 +158,5 @@ D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\To
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\Todo.razor.g.cs
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Shared\GroupList.razor.g.cs
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Shared\GroupList.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\MenuDocTitle.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\MenuDocTitle.razor.g.cs

@@ -141,7 +141,7 @@ using BlazorApp1.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 340 "D:\Project2021\Project2021\BlazorApp1\Pages\Menu.razor"
+#line 246 "D:\Project2021\Project2021\BlazorApp1\Pages\Menu.razor"
       
     string selectedTab = "MENU";
 
@@ -155,10 +155,10 @@ using BlazorApp1.Data;
 
         //}
 
-        if (name == "MENU")
-        {
-            ToggleNavMenu();
-        }
+        //if (name == "MENU")
+        //{
+        //    ToggleNavMenu();
+        //}
 
     }
 
