@@ -1,7 +1,7 @@
-﻿
+﻿@page "/menu/{id?}"
+
 @layout CleanLayout
 @inject NavigationManager NavigationManager
-@page "/menu/{id?}"
 @*@attribute [Authorize]*@
 @using Microsoft.AspNetCore.Hosting;
 @inject IWebHostEnvironment WebEnvironment;
@@ -19,93 +19,182 @@
 <Tabs SelectedTab="@selectedTab" SelectedTabChanged="@OnSelectedTabChanged">
     <Items>
         <Tab Name="MENU">MENU</Tab>
-        <Tab Name="home">C000</Tab>
-        <Tab Name="profile">M000</Tab>
-        <Tab Name="messages">P000</Tab>
-        <Tab Name="settings">Q000</Tab>
-        <Tab Name="R000">R000</Tab>
-        <Tab Name="S000">S000</Tab>
+        <Tab Name="DOC">DOC</Tab>
+        <Tab Name="AREA1">AREA1</Tab>
+        <Tab Name="AREA2">AREA2</Tab>
+        <Tab Name="AREA3">AREA3</Tab>
+        <Tab Name="USER">USER</Tab>
+        @*<Tab Name="profile">M000</Tab>
+            <Tab Name="messages">P000</Tab>
+            <Tab Name="settings">Q000</Tab>
+            <Tab Name="R000">R000</Tab>
+            <Tab Name="S000">S000</Tab>*@
         @*<Tab Name="ALL">ALL</Tab>
             <Tab Name="SELECTED">SEL</Tab>*@
     </Items>
+
     <Content>
         <TabPanel Name="MENU">
 
+            <h3><span @onclick="()=>ToggleNavMenu()">Menu</span></h3>
 
+            <div class="menu123456"> <span @onclick="()=>ToggleSubMenuX(1)">(1) P000 Process Executing 流程执行 </span></div>
+            <GroupList IsExpand="@expandSubMenuX[1]" XList="@PageListP" programId="@Id" dir="@dir"></GroupList>
+            @if (expandSubMenuX[1])
+            {
+                @if (@PageListP != null)
+                {
+                    <ul>
+                        @foreach (var item in @PageListP)
+                        {
+                            if (item.Id == Id)
+                            {
+                                <li class="menu123456-selected"><a href="/@dir/@item.Id">  @item.Name</a></li>
 
-            <h4> (1) P000 Process Executing 流程执行 </h4>
-            @if (@PageListP != null)
-            {
-                <ul>
-                    @foreach (var item in @PageListP)
-                    {
-                        <li><a href="/doc3/@item.Id">  @item.Name</a></li>
-                    }
-                </ul>
-            }
-            <h4> (2) M000 Data Maintenance 数据维护 </h4>
-            @if (@PageListM != null)
-            {
-                <ul>
-                    @foreach (var item in @PageListM)
-                    {
-                        <li><a href="/doc3/@item.Id">  @item.Name</a></li>
-                    }
-                </ul>
-            }
-            <h4> (3) C000 Physical Inventory Count 库存盘点 </h4>
-            @if (@PageListC != null)
-            {
-                <ul>
-                    @foreach (var item in @PageListC)
-                    {
-                        <li><a href="/doc3/@item.Id">  @item.Name</a></li>
-                    }
-                </ul>
-            }
-            <h4> (4) Q000 Data Inquire 数据查询 </h4>
-            @if (@PageListQ != null)
-            {
-                <ul>
-                    @foreach (var item in @PageListQ)
-                    {
-                        <li><a href="/doc3/@item.Id">  @item.Name</a></li>
-                    }
-                </ul>
+                            }
+                            else
+                            {
+                                <li><a href="/@dir/@item.Id">  @item.Name</a></li>
+
+                            }
+                        }
+                    </ul>
+                }
             }
 
-            <h4> (5) R000 Report 报表 </h4>
-            @if (@PageListR != null)
+            <div class="menu123456"> <span @onclick="()=>ToggleSubMenuX(2)">(2) M000 Data Maintenance 数据维护 </span></div>
+            <GroupList IsExpand="expandSubMenuX[2]" XList="@PageListM" programId="Id" dir="@dir"></GroupList>
+            @if (expandSubMenuX[2])
             {
-                <ul>
-                    @foreach (var item in @PageListR)
-                    {
-                        <li><a href="/doc3/@item.Id">  @item.Name</a></li>
-                    }
-                </ul>
+                @if (@PageListM != null)
+                {
+                    <ul>
+                        @foreach (var item in @PageListM)
+                        {
+                            <li><a href="/@dir/@item.Id">  @item.Name</a></li>
+                        }
+                    </ul>
+                }
             }
-            <h4> (6) S000 System Setting 系统设定 </h4>
-            @if (@PageListS != null)
+            <div class="menu123456">
+                <span @onclick="()=>ToggleSubMenuX(3)"> (3) C000 Physical Inventory Count 库存盘点 </span>
+            </div>
+            <GroupList IsExpand="expandSubMenuX[3]" XList="@PageListC" programId="Id" dir="@dir"></GroupList>
+
+            @if (expandSubMenuX[3])
             {
-                <ul>
-                    @foreach (var item in @PageListS)
-                    {
-                        <li><a href="/doc3/@item.Id">  @item.Name</a></li>
-                    }
-                </ul>
+                @if (@PageListC != null)
+                {
+                    <ul>
+                        @foreach (var item in @PageListC)
+                        {
+                            <li><a href="/@dir/@item.Id">  @item.Name</a></li>
+                        }
+                    </ul>
+                }
             }
 
 
 
+            <div class="menu123456">
+                <span @onclick="()=>ToggleSubMenuX(4)"> (4) Q000 Data Inquire 数据查询 </span>
+            </div>
+            <GroupList IsExpand="expandSubMenuX[4]" XList="@PageListQ" programId="Id" dir="@dir"></GroupList>
+
+            @if (expandSubMenuX[4])
+            {
+
+
+
+                @if (@PageListQ != null)
+                {
+                    <ul>
+                        @foreach (var item in @PageListQ)
+                        {
+                            <li><a href="/@dir/@item.Id">  @item.Name</a></li>
+                        }
+                    </ul>
+                }
+            }
+
+
+            <div class="menu123456">
+                <span @onclick="()=>ToggleSubMenuX(5)">  (5) R000 Report 报表</span>
+            </div>
+            <GroupList IsExpand="expandSubMenuX[5]" XList="@PageListR" programId="Id" dir="@dir"></GroupList>
+
+            @if (expandSubMenuX[5])
+            {
+
+                @if (@PageListR != null)
+                {
+                    <ul>
+                        @foreach (var item in @PageListR)
+                        {
+                            <li><a href="/@dir/@item.Id">  @item.Name</a></li>
+                        }
+                    </ul>
+                }
+            }
+
+            <div class="menu123456">
+                <span @onclick="() => ToggleSubMenuX(6)"> (6) S000 System Setting 系统设定</span>
+            </div>
+            <GroupList IsExpand="expandSubMenuX[6]" XList="@PageListS" programId="Id" dir="@dir"></GroupList>
+
+            @if (expandSubMenuX[6])
+            {
+
+                @if (@PageListS != null)
+                {
+                    <ul>
+                        @foreach (var item in @PageListS)
+                        {
+                            <li><a href="/@dir/@item.Id">  @item.Name</a></li>
+                        }
+                    </ul>
+                }
+            }
 
 
 
 
 
 
+        </TabPanel>
 
 
+        <TabPanel Name="DOC">
+            @if (StrId == null)
+            {
 
+            }
+            else
+            {
+                <br />
+                <HomeHeadDoc3 Title=@PageTitle></HomeHeadDoc3>
+                @strHtml
+            }
+
+
+        </TabPanel>
+
+        <TabPanel Name="AREA1">
+            <h3>WORKING AREA 1</h3>
+            <HomeHeadDoc3 Title=@PageTitle></HomeHeadDoc3>
+        </TabPanel>
+        <TabPanel Name="AREA2">
+            <h3>WORKING AREA 2</h3>
+            <HomeHeadDoc3 Title=@PageTitle></HomeHeadDoc3>
+        </TabPanel>
+        <TabPanel Name="AREA3">
+            <h3>WORKING AREA 3</h3>
+            <HomeHeadDoc3 Title=@PageTitle></HomeHeadDoc3>
+        </TabPanel>
+
+        <TabPanel Name="USER">
+            <h3>LOGIN/LOGOUT</h3>
+            ALSO SHOW USER'S GROUP/ROLE
         </TabPanel>
 
         <TabPanel Name="home">
@@ -261,6 +350,11 @@
 
         //}
 
+        if (name == "MENU")
+        {
+            ToggleNavMenu();
+        }
+
     }
 
     [Parameter]
@@ -268,6 +362,7 @@
 
     public string PageTitle { get; set; }
 
+    public string dir = "menu";
 
     public List<IdName> PageList;
     public List<IdName> PageListC;
@@ -362,6 +457,37 @@
 
     }
 
+    // NOTE by Mark, 2021-01-08
+    private bool expandSubMenu = false;
+    private void ToggleSubMenu()
+    {
+        expandSubMenu = !expandSubMenu;
+    }
 
+    private bool collapseNavMenu = true;
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private bool[] expandSubMenuX = new bool[7];
+
+    private void ToggleSubMenuX(int seq)
+    {
+
+        expandSubMenuX[seq] = !expandSubMenuX[seq];
+    }
+    private void ToggleNavMenu()
+    {
+        //collapseNavMenu = !collapseNavMenu;
+        //foreach (bool x in expandSubMenuX.Select)
+        //{
+        //    x = false;
+        //}
+        collapseNavMenu = !collapseNavMenu;
+
+        for (int i = 0; i < expandSubMenuX.Count(); i++)
+        {
+            // Do something...
+            expandSubMenuX[i] = collapseNavMenu;
+        }
+    }
 
 }

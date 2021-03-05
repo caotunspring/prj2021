@@ -141,7 +141,7 @@ using BlazorApp1.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 251 "D:\Project2021\Project2021\BlazorApp1\Pages\Menu.razor"
+#line 340 "D:\Project2021\Project2021\BlazorApp1\Pages\Menu.razor"
       
     string selectedTab = "MENU";
 
@@ -155,6 +155,11 @@ using BlazorApp1.Data;
 
         //}
 
+        if (name == "MENU")
+        {
+            ToggleNavMenu();
+        }
+
     }
 
     [Parameter]
@@ -162,6 +167,7 @@ using BlazorApp1.Data;
 
     public string PageTitle { get; set; }
 
+    public string dir = "menu";
 
     public List<IdName> PageList;
     public List<IdName> PageListC;
@@ -256,7 +262,38 @@ using BlazorApp1.Data;
 
     }
 
+    // NOTE by Mark, 2021-01-08
+    private bool expandSubMenu = false;
+    private void ToggleSubMenu()
+    {
+        expandSubMenu = !expandSubMenu;
+    }
 
+    private bool collapseNavMenu = true;
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private bool[] expandSubMenuX = new bool[7];
+
+    private void ToggleSubMenuX(int seq)
+    {
+
+        expandSubMenuX[seq] = !expandSubMenuX[seq];
+    }
+    private void ToggleNavMenu()
+    {
+        //collapseNavMenu = !collapseNavMenu;
+        //foreach (bool x in expandSubMenuX.Select)
+        //{
+        //    x = false;
+        //}
+        collapseNavMenu = !collapseNavMenu;
+
+        for (int i = 0; i < expandSubMenuX.Count(); i++)
+        {
+            // Do something...
+            expandSubMenuX[i] = collapseNavMenu;
+        }
+    }
 
 
 #line default
