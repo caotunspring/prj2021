@@ -152,3 +152,5 @@ D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\BlazorApp1.dll
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\ref\BlazorApp1.dll
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\BlazorApp1.pdb
 D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\BlazorApp1.genruntimeconfig.cache
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\Menu.razor.g.cs
+D:\Project2021\Project2021\BlazorApp1\obj\Debug\net5.0\Razor\Pages\Menu.razor.g.cs
