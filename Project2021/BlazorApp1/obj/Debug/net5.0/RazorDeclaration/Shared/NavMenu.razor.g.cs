@@ -132,7 +132,7 @@ using Blazorise.TreeView;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 59 "D:\Project2021\Project2021\BlazorApp1\Shared\NavMenu.razor"
+#line 64 "D:\Project2021\Project2021\BlazorApp1\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

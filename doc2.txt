@@ -1,0 +1,2138 @@
+﻿
+
+
+
+
+
+
+Thailand DOHOME AS/RS
+ Warehouse Executing System
+Operation Manual
+
+
+
+
+
+
+
+
+
+
+
+
+Mirle Automation Corp.
+
+
+
+更新记录 (Change Record)
+
+版本
+Version
+出版日期
+Issue Date
+修订章节
+Section
+Changed
+出版修订原因
+Reason for Issue
+备注
+Remarks
+1
+2019/10/4
+All
+First Draft Issue
+Homer
+2
+2021/02/10
+All
+Final
+韩雪英
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Content
+
+Program List	4
+GUI operation instructions画面操作说明	7
+1. Login登录界面	7
+2. Executing执行作业	8
+2.1 Pallet inventory adjustment	8
+2.2 Delivery Out	10
+2.3 Delivery confirmation	12
+2.4 Delivery cancellation	13
+2.5 AS/RS transfer out	14
+2.6 Empty pallets store in	15
+2.7 Empty pallets store out	16
+2.8 Inventory transfer	17
+3. Physical Inventory Count盘点作业	18
+3.1 Physical inventory count by storage bin location	18
+3.2 . Physical inventory count by article number	19
+3.3．Physical inventory count by SAP	20
+3.4．Record Physical inventory count	21
+3.5．Physical inventory adjustment	22
+4.  Maintenance维护作业	23
+4.1 Storage bin location data maintenance	23
+4.2 AS/RS handling command maintenance	25
+4.3 Storage bin location disable/enable maintenance	27
+4.4 Code data maintenance	27
+4.5 User authorization maintenance	29
+5.  Inquiry查询作业	31
+5.1 Article basic data inquiry	31
+5.2 Inventory data inquiry	32
+5.3 AS/RS storage bin location status inquiry	33
+5.4 AS/RS handling command inquiry	34
+5.5 SAP inbound/outbound request data inquiry	35
+5.6 Inventory transaction log inquiry	36
+Program List
+1
+Login 登入　
+1-1
+Login
+登入
+Provides a function module for the user to log in according to the authority and display the scope of the user's permission after login.
+提供使用者依权限登入，登录后可显示使用者权限范围的功能模块
+2
+Executing 执行作业　
+2-1
+Pallet inventory adjustment
+托盘存货调整作业
+Create or change the association between the articles information and the pallet code in the inbound staging area
+创建或改变入库暂存区中货物信息与托盘码的关联
+2-2
+Delivery out
+交货出库作业
+Outbound operation based on SAP delivery information, and transfer articles into the outbound staging area
+根据SAP交货信息进行出库操作，将货物转入出库暂存区
+2-3
+Delivery confirmation
+交货出库确认
+Confirm the information and quantity of articles in the outbound staging  area
+确认出库暂存区中交货出库货物信息与数量
+2-4
+Delivery cancellation
+交货出库取消
+Cancel the information and quantity of the articles in the outbound staging  area, and transfer the articles into the inbound staging area.
+取消出库暂存区中交货出库货物信息与数量，将货物转入入库暂存区
+2-5
+Storage area transfer
+转储区作业
+The articles in the automatic warehouse are taken out to the inbound staging  area.
+将自动仓库中的货物出库到入库暂存区
+2-6
+Empty pallets in
+空托盘入库
+Specify pallet code to allow storage
+指定托盘码允许入库
+2-7
+Empty pallets out
+空托盘出库
+Outbound operation of empty pallets stored in an automated warehouse.
+对储存在自动仓库中的空托盘进行出库操作
+2-8
+Inventory Transfer
+存货属性移转
+Change inventory attributes such as Plant, Storage Location, Special Stock, Stock Category
+改变存货属性如Plant、Storage Location、Special Stock、Stock Category
+3
+Physical Inventory Count 盘点作业　
+3-1
+Physical inventory count by storage bin location
+依库位盘点
+Specify the storage bin location range to be counted for inventory.
+指定要盘点的库位范围进行盘点
+3-2
+Physical inventory count by article number
+依物料盘点
+Specify the article number range to be counted for inventory.
+指定要盘点的货号范围进行盘点
+3-3
+Physical inventory count by SAP
+SAP盘点
+Inventory count based on the inventory information transmitted by SAP.
+依据SAP下传之盘点信息进行盘点
+3-4
+Record physical 
+inventory count 
+盘点结果录入
+Record the quantity of counts.
+录入盘点数量
+3-5
+Physical inventory adjustment
+盘点调账
+Adjust the quantity of stock based on the quantity of counts recorded.
+根据所记录的盘点数量调整存货数量
+4
+Maintenance 维护作业
+4-1
+Storage bin location data maintenance
+库位资料维护
+Maintain the basic information of the storage bin location.
+维护库位基本资料
+4-2
+AS/RS handling command 
+maintenance
+自动仓库搬运命令维护
+Maintenance AS/RS handling commands include canceling the execution of commands, forcing the completion of commands, and modifying the priority of commands.
+维护命令包括取消执行命令,强制命令完成,修改命令顺序
+4-3
+Storage bin location
+disable/enable
+maintenance
+禁用库位维护
+Maintenance of the disable/enable of the storage bin location.
+对库位的禁用进行维护
+4-4
+User authorization maintenance
+用户权限维护
+Authorization/Deauthorization of user function usage rights.
+授权/取消授权用户功能使用权
+4-5
+Code data maintenance
+代码资料维护
+Maintain all code data in the WES system.
+维护WES系统中所有代码数据
+5
+Inquiry 查询作业
+5-1
+Article basic data inquiry
+货物基本资料查询
+Check the basic information of the articles.
+查询货物基本资料
+5-2
+Inventory data inquiry货物库存查询
+Query article inventory information.
+查询货物库存资料
+5-3
+ASRS storage bin location status inquiry
+自动仓库库位使用状态查询
+Query the status of automatic warehouse storage bin location usage.
+查询自动仓库库位使用状态
+5-4
+AS/RS handling command 
+inquiry
+自动仓库命令资料查询
+Query automatic warehouse handling command data.
+查询自动仓库搬运命令资料
+5-5
+SAP inbound/outbound 
+request data inquiry
+单据资料查询
+Query inbound and outbound request data.
+查询入出库单据资料
+5-6
+Inventory
+transaction log 
+inquiry
+异动记录查询
+Query the execution record of the inbound and outbound and attribute transfer.
+查询入出库及属性移转的执行记录
+
+
+GUI operation instructions画面操作说明
+    1. Login
+登录界面
+
+
+Function Description功能说明：Login user name and password to enter the AS/RS Warehouse Executing System management system登录用户名称与密码进入AS/RS Warehouse Executing System管理系统。
+    1. Enter the user name and password, select the default language输入用户名称和密码，选择默认语言。
+    2. Click "Login", the user enters the WES system单击‘Login’，用户进入WES系统。
+    3. Click ‘Exit’ to exit the login interface单击‘Exit’，退出登录界面。
+
+
+
+
+    2. Main Operation Menu主操作菜單
+
+
+The main screen is divided into five areas主屏幕分為五個區域：
+    (1) Title & Version
+Show program name and version number显示程式名称及版本号
+    (2) Operation Menu
+Execution button during program operation程式操作时的执行按钮
+    (3) Program List
+User-operable programs使用者可操作的程式
+    (4) Data Manipulate
+Data displayed when the program is executing程式执行时显示的数据
+    (5) Login Information 
+Database and local computer information displayed after user login
+使用者登入后显示的数据库及本机电脑信息
+
+Above is the Menu Bar. Click Exit to exit the window, or click X in the upper right corner of the window to close the window.
+On the left is a list of programs. Only programs that can be executed by the logged-in user will appear.
+The program window is on the right. Click the program list on the left to display the program window.
+上方是Menu Bar，点选Exit可退出视窗，或点视窗右上角X可关闭视窗。
+左边是程式清单，只会出现登入用户可执行的程式。
+右边是程式视窗，点选左边的程式清单就会出现程式视窗。
+
+    3. Program List程序清單
+
+
+Program List contains 6 major functions程序清單包含6個主要功能：
+    (1) P000 Process Executing
+流程执行
+    (2) M000 Data Maintenance
+数据维护
+    (3) C000 Physical Inventory Count
+库存盘点
+    (4) Q000 Data Inquire
+数据查询
+    (5) R000 Report
+报表
+    (6) S000 System Setting
+系统设定
+
+The system must be configured before use系统在使用先必须先进行系统设定
+    4. System Setting系统设定
+Before the system starts to use, the system administrator must first establish the system user, the system program, and setup the right to use the program.
+Setting the executable programs and operations performed by different users will restrict users' operations.
+Users with the same role can create the users groups to facilitate the setting of program usage rights; but they can still individually set user program usage rights.
+系统在开始使用前，系统管理员须先建立系统使用者、系统程式及设定程式的使用权。
+设定不同的使用者可执行的程式及执行的操作，将会限制使用者的操作。
+相同角色的使用者，可以创建、设定使用群组，方便操作程式使用权的设定；但仍然可以个别设定使用者程式使用权限。
+
+
+        4.1 S010 User Basic Data Maintain使用者基本数据维护
+
+
+作业目的
+Operation purpose
+使用者基本数据维护
+User's basic data maintenance
+说明
+Description
+管理立库使用者的基本数据、密码及是否启用
+Manage the basic data, passwords and enable of WES users
+角色
+Roles
+系统管理员
+System administrator
+前置条件
+Precondition
+有管理权限的使用者
+Users with administrative rights
+输入
+Input
+使用者编码、使用者名称
+User ID, user name
+输出
+Output
+使用者基本数据
+User basic data
+异常处里
+Abnormal handle
+如果无符合条件的使用者数据，系统将提示查无此使用者信息
+If there is no matching user data, the system will prompt to find no such user information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选使用者编码后点选Query查询使用者数据
+Enter query conditions or select user code and click Query to query user data
+    2. 输入使用者基本信息后，如已存在系统内的点选Update更新；不存在系统的点选Create建创新的使用者
+After entering the user's basic information, click Update if it already exists in the system; click Create to create a new user if the system does not exist
+    3. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    4. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+执行S040 Group User Data Maintain确认使用者与群组的分配
+Execute S040 Group User Data Maintain to confirm user and group assignment
+备注
+Remark
+
+
+        4.2 S020 Group Basic Data Maintain群组基本数据维护
+
+
+作业目的
+Operation purpose
+群组基本数据维护
+Basic data maintenance for groups
+说明
+Description
+管理立库群组的基本数据、管理者及是否启用
+Manage the basic data of the WES user group, the group owner, and whether to enable it
+角色
+Roles
+系统管理员
+System administrator
+前置条件
+Precondition
+有管理权限的使用者
+Users with administrative rights
+输入
+Input
+群组编码、群组名称
+Group ID, group name
+输出
+Output
+群组基本数据
+Group basic data
+异常处里
+Abnormal handle
+如果无符合条件的群组数据，系统将提示查无此群组信息；
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选群组编码后点选Query查询群组数据
+Enter query conditions or select group code and click Query to query group data
+    2. 输入群组基本信息后，如已存在系统内的点选Update更新；不存在系统的点选Create建创新的群组
+After entering the basic group information, click Update if it already exists in the system; click Create if there is no system to create an new group
+    3. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    4. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+执行S040 Group User Data Maintain确认使用者与群组的分配
+Execute S040 Group User Data Maintain to confirm user and group assignment
+备注
+Remark
+
+
+        4.3 S030 Program Basic Data Maintain程序基本数据维护
+
+
+作业目的
+Operation purpose
+程序基本数据维护
+Program basic data maintenance
+说明
+Description
+管理立库程序的基本数据、是否启用
+Manage the basic data of the WES program, whether to enable it
+角色
+Roles
+系统管理员
+System administrator
+前置条件
+Precondition
+有管理权限的使用者
+Users with administrative rights
+输入
+Input
+程序编码、程序名称
+Program ID, program name
+输出
+Output
+程序基本数据
+Program basic data
+异常处里
+Abnormal handle
+如果无符合条件的程序数据，系统将提示查无此程序信息
+If there is no qualified program data, the system will prompt to check for no program information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选程序编码后点选Query查询程序数据
+Enter query conditions or select program code and click Query to query program data
+    2. 输入程序基本信息后，如已存在系统内的点选Update更新；不存在系统的点选Create建创新的程序
+After entering the basic information of the program, click Update if it already exists in the system; click Create if there is no system to create an innovative program
+    3. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    4. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+执行S050 Program Authorization by Group或S060 Program Authorization by User确认程序的使用权限
+Execute S050 Program Authorization by Group or S060 Program Authorization by User to confirm the use right of the program
+备注
+Remark
+
+
+        4.4 S040 Group User Data Maintain群组使用者数据维护
+
+
+作业目的
+Operation purpose
+群组使用者数居维护
+Group user data maintenance
+说明
+Description
+管理群组适用者数据、是否启用
+Manage the group user data , whether to enable it
+角色
+Roles
+系统管理员
+System administrator
+前置条件
+Precondition
+有管理权限的使用者
+Users with administrative rights
+输入
+Input
+群组编码、使用者编号
+Group ID, User ID
+输出
+Output
+群组使用者数据
+Group user data
+异常处里
+Abnormal handle
+如果无符合条件的群组或使用者，系统将提示查无此信息
+If there is no qualified group or user data, the system will prompt to check the group or check the user information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. Enter Group ID and click Query to query group data
+输入群组编码后点选Query查询群组数据
+    2. If the group exists, you can select the user list on the left and click "Add>>" to add to the group user list on the right. Or select the group user list on the right and click "<<Remove" to remove the user
+如群组存在，则可挑选左边使用者清单后点击”Add>>”加入右边的群组使用者清单；或挑选右边群组使用者清单后点击”<<Remove”移除使用者
+    3. Click refresh to clear the data on the screen and return to the initial state
+点选功能菜单Refresh可清除画面上的数据回到初始状态
+    4. Click the function menu exit or close window to end this job
+点选功能菜单Exit或关闭视窗可结束此作
+后置条件
+Post condition
+执行S050 Program Authorization by Group确认程序的使用权限
+Execute S050 Program Authorization by Group to confirm the use right of the program
+备注
+Remark
+
+
+        4.5 S050 Program Authorization by Group依群组设定程序使用权
+
+作业目的
+Operation purpose
+依群组设定程序使用权限
+Program permission management for groups
+说明
+Description
+设定各个群组的程序使用权限
+Set permissions for programs in each group
+角色
+Roles
+系统管理员
+System administrator
+前置条件
+Precondition
+已建立好群组使用者的维护
+Created group user data
+输入
+Input
+群组编码、群组名称、群组管理员
+Group ID, group name, group owner
+输出
+Output
+程序数据、更新群组授权档
+Program data, update group authorization data
+异常处里
+Abnormal handle
+如果无符合条件的群组数据，系统将提示查无此群组信息
+If there is no matching group data, the system will prompt to find no such group information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选群组编码后点选Query查询群组授权数据
+Enter query conditions or select group code and click Query to query group authorization data
+    2. 从左边程序列表Add新增，或从右边程序授权列表Remove移除，可针对单一程序指定查询、打印、汇入、汇出、更新、删除、审批、是否使用等权限
+Add from the left program list Add or remove from the right program authorization list Remove, you can specify permissions for a single program to query, print, import, export, update, delete, approve, use.
+    3. 点选功能菜单Save储存数据，完成操作
+Click the function menu Save to save the data and complete the operation
+    4. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    5. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+无
+Not Applicable
+备注
+Remark
+
+
+
+        4.6 S060 Program Authorization by User依使用者设定程序使用权
+
+
+作业目的
+Operation purpose
+依使用者设定程序使用权限
+Program authorization management for user
+说明
+Description
+设定各个使用者的程序使用权限
+Set program permissions for each user
+角色
+Roles
+系统管理员
+System administrator
+前置条件
+Precondition
+已建立好使用者的基本数据
+Basic user data has been created
+输入
+Input
+使用者编码、使用者名称、部门名称
+User ID, user name, department name
+输出
+Output
+程序数据、更新使用者授权档
+Program data, update user authorization data
+异常处里
+Abnormal handle
+如果无符合条件的使用者数据，系统将提示查无此群组信息
+If there is no matching user data, the system will prompt to find no such group information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选使用者编码后点选Query查询使用者授权数据
+Enter query conditions or select user code and click Query to query user authorization data
+    2. 从左边程序列表Add新增，或从右边程序授权列表Remove移除，可针对单一程序指定查询、打印、汇入、汇出、更新、删除、审批、是否使用等权限
+Add from the left program list Add or remove from the right program authorization list Remove, you can specify permissions for a single program to query, print, import, export, update, delete, approve, use.
+    3. 点选功能菜单Save储存数据，完成操作
+Click the function menu Save to save the data and complete the operation
+    4. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    5. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+设定完权限后需重新登入系统方可生效
+After setting permissions, you need to log in to the system again to take effect.
+备注
+Remark
+
+
+        4.7 S070 Code Data Maintain代码维护(Not apply不适用)
+
+作业目的
+Operation purpose
+代码维护
+Maintenance of code data
+说明
+Description
+由使用者自行设定所需要的数据
+Set the required data by the user
+角色
+Roles
+系统管理员
+System administrator
+前置条件
+Precondition
+系统开发前期已确认代码数据
+Confirmed code data in the early stage of system development
+输入
+Input
+代码类型、代码、代码排序、代码名称
+Code type, code no., code order, code name
+输出
+Output
+代码数据、更新代码档
+Code data, update code data
+异常处里
+Abnormal handle
+如果无符合条件的代码数据，系统将提示查无此代码信息
+If there is no code data that meets the requirements, the system will prompt to find no such code information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件后点选Query查询代码数据
+Enter query conditions and click Query to query code data
+    2. 挑选欲修改的数据，修改数据后点选Update更新；或是点选Delete删除数据
+Select the data you want to modify and click Update after modifying the data; or click Delete to delete the data
+    3. 如输入代码不存在，可直接输入基本数据后点选Create创建
+If the input code does not exist, you can directly enter the basic data and click Create.
+    4. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    5. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+无
+Not Applicable
+备注
+Remark
+
+
+
+        4.8 S080 User Login Password Change使用者登入密码变更
+
+
+作业目的
+Operation purpose
+使用者登录密码变更
+Change of user login password
+说明
+Description
+变更指定的使用者登入系统密码
+Change the specified user login system password
+角色
+Roles
+系统管理员或使用者
+System administrator or user
+前置条件
+Precondition
+已有使用者的基本数据
+Basic data of existing users
+输入
+Input
+使用者编码、原密码、新密码
+User ID, original password, new password
+输出
+Output
+更新使用者密码
+Update user password
+异常处里
+Abnormal handle
+如果变更失败或是密码要求不符时，系统将提示错误信息；
+If the change fails or the password requirements do not match, the system will prompt an error message;
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入使用者编码、原密码及新密码后点选Change变更
+Enter user ID, original password and new password and click Change
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+设定完密码后需重新登入系统方可生效
+After setting the password, you need to log in the system again to take effect.
+备注
+Remark
+
+
+        4.9 S090 Translation Dictionary Maintain翻译字典维护
+作业目的
+Operation purpose
+翻译字典维护
+Maintenance of translation dictionary
+说明
+Description
+由管理者依据使用语言设定程序显示字段
+The manager sets the program display fields according to the language used
+角色
+Roles
+系统管理员
+System administrator
+前置条件
+Precondition
+无
+Not Applicable
+输入
+Input
+字段显示内容
+Field display content
+输出
+Output
+字段显示翻译档
+Field display translation dictionary
+异常处里
+Abnormal handle
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件后点选Query查询字段显示文字
+Enter query conditions and click Query to query field display text
+    2. 挑选欲修改的数据，修改数据后点选Update更新；或是点选Delete删除数据
+Select the data you want to modify and click Update after modifying the data; or click Delete to delete the data
+    3. 如输入字段不存在，可直接输入基本数据后点选Create创建
+If the input field text does not exist, you can directly enter the field text and click Create.
+    4. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    5. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+无
+Not Applicable
+备注
+Remark
+
+
+
+    5. Process Executing入出库执行作业
+此部分为立库入出库及存或移转托盘或属性的作业程式集合。
+This section is a collection of operating procedures for putting in and out of the AS/RS warehouse and storing or transferring goods pallet or article attributes.
+
+        5.1. P020 Stock Allocation for Delivery Order(Auto)交货单分配库存出库(自动)
+
+
+作业目的
+Operation purpose
+发货条件不是20或90的交货单自动分配库存出库
+Automatically allocates inventory storage for delivery order that shipping condition is not 20 or 90
+说明
+Description
+查看是否还有未自动执行的交货单
+Check if there are any delivery orders that are not automatically executed
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+SAP下传相关Delivery Data
+SAP download related delivery data
+输入
+Input
+可执行Delivery数据
+Executable Delivery Data
+输出
+Output
+拣配数据、更新Delivery数据状态
+Picking data, updating Delivery data status
+异常处里
+Abnormal handle
+如果无符合条件的Delivery数据，系统将提示查无可用Delivery信息，用户可执行Data Inquire-->Q050 Delivery Order Data Query作业查询Delivery数据与状态；或挑选指定的Delivery No.
+If there is no eligible Delivery data, the system will prompt to check that no Delivery information is available. The user can run the Data Inquire-> Q050 Delivery Order Data Query job to query the Delivery data and status; or select the specified Delivery No.
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选Delivery No后点选Query查询可拣配Delivery表头与明细清单
+Enter the query conditions or select Delivery No and click Query to pick the Delivery header and detailed list.
+    2. 挑选要拣配的Delivery数据，点选Execute产生拣配数据并更新Delivery数据状态
+Select the Delivery data, click Execute to generate picking data and update Delivery data status
+    3. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click the function menu Refresh to clear the data on the screen and return to the initial state.
+    4. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu Exit or close the window to end this operation
+后置条件
+Post condition
+自动仓库搬运出库
+AS/RS move out the pallet
+备注
+Remark
+此作业依据FEFO & FIFO等逻辑自动分配库存。此程序为备用，可检查是否有未能自动执行或未执行完成的交货单。
+This operation automatically allocates inventory based on logic such as FEFO & FIFO. This program is a backup, you can check whether there is a delivery order that is not automatically executed or not executed completely.
+
+
+        5.2. P030 Stock Allocation for Delivery Order(Manual)交货单分配库存出库(人工)
+
+
+作业目的
+Operation purpose
+发货条件是20或90的交货单自动分配库存出库
+Automatically allocates inventory storage for delivery order that shipping condition is 20 or 90
+说明
+Description
+由人工挑选交货单启动自动仓出库下架
+Manually select the delivery order to start the automatic warehouse move out the allocated pallet
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+SAP下传相关Delivery Data
+SAP download related delivery data
+输入
+Input
+可执行Delivery数据
+Executable Delivery Data
+输出
+Output
+拣配数据、更新Delivery数据状态
+Picking data, updating Delivery data status
+异常处里
+Abnormal handle
+如果无符合条件的Delivery数据，系统将提示查无可用Delivery信息，用户可执行Data Inquire-->Q050 Delivery Order Data Query作业查询Delivery数据与状态；或挑选指定的Delivery No.
+If there is no eligible Delivery data, the system will prompt to check that no Delivery information is available. The user can run the Data Inquire-> Q050 Delivery Order Data Query job to query the Delivery data and status; or select the specified Delivery No.
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选Delivery No后点选Query查询可拣配Delivery表头与明细清单
+Enter the query conditions or select Delivery No and click Query to pick the Delivery header and detailed list.
+    2. 点选Execute产生拣配数据并更新Delivery数据状态
+Click Execute to generate picking data and update Delivery data status
+    3. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click the function menu Refresh to clear the data on the screen and return to the initial state.
+    4. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu Exit or close the window to end this operation
+后置条件
+Post condition
+自动仓库搬运出库
+AS/RS move out the pallet
+备注
+Remark
+此作业依据FEFO & FIFO等逻辑自动分配库存。一个托盘不能同时有多个TO分配出库。
+This job automatically allocates inventory based on logic such as FEFO & FIFO. One pallet cannot have multiple TO allocated out of the warehouse at the same time.
+
+
+        5.3. P060 Storage Transfer Out转储出库
+
+
+作业目的
+Operation purpose
+因为某种需求将托盘货物从立库转出
+Transfer of pallet goods from the warehouse due to a certain demand
+说明
+Description
+也许因为要查问题或整理货物或改变货物储存托盘等原因，将托盘货物从立库搬出
+May be because of the need to check the problem or organize the goods or change the goods storage pallets, etc., remove the pallet goods from the warehouse
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+托盘货物在立库货架状态为库存状态
+Pallet article are in inventory status
+输入
+Input
+托盘货物储存数据
+Pallet article storage data
+输出
+Output
+搬运命令
+Transfer out command
+异常处里
+Abnormal handle
+如果无符合条件的拣配数据，系统将提示查无可用拣配信息，用户可执行Data Inquire-->Q080 Inventory Data Query作业查询托盘数据；
+If there is no matching picking data, the system will prompt to check that no picking information is available, and the user can perform Data Inquire-> Q080 Inventory Data Query to query the tray data;
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件后点选Query查询托盘明细清单
+Enter query conditions and click Query
+    2. 选择要出库的托盘，点选功能菜单Execute产生出库搬运命令
+Select the pallet to be transfer out, click the function menu Execute to generate the transfer out command
+    3. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click the function menu Refresh to clear the data on the screen and return to the initial state.
+    4. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu Exit or close the window to end this operation
+后置条件
+Post condition
+WCS执行出库搬运命令后由人工执行P070 Pallet Inventory Adjustment重新绑定货物与托盘关系
+After WCS executes the out-of-warehousing command, P070 Pallet Inventory Adjustment is performed manually to rebind the relationship between the goods and the pallet.
+备注
+Remark
+
+        5.4. P070 Pallet Inventory Adjustment托盘库存调整
+作业目的
+Operation purpose
+重新整理货物所绑定的托盘
+Rearrange the pallets to which the article are bound
+说明
+Description
+重新整理货物所绑定的托盘，可以将零散的货物整并在一个托盘
+Rearrange the pallets to which the article are bound, can consolidate scattered goods in one pallet
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+货物托盘已Transfer Out出库
+Article pallets have been transferred out of the warehouse
+输入
+Input
+序列号或原托盘号及目的托盘号
+Serial number or original pallet number and destination pallet number
+输出
+Output
+更改托盘货物绑定关系
+Change pallet article binding relationship
+异常处里
+Abnormal handle
+如果无符合条件的托盘明细数据，系统将提示查无可用托盘明细信息，用户可执行Data Inquire-->Q080 Inventory Data Query作业查询托盘明细数据；
+If there is no qualified pallet detail data, the system will prompt to check that there is no available pallet detail information. The user can run the Data Inquire-> Q080 Inventory Data Query job to query the pallet detail data;
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件后点选Query查询托盘明细清单
+Enter query conditions and click Query
+    2. 挑选要转出的原托盘明细后点选Execute完成更新
+Select the details of the original tray to be transferred out and click Execute to complete the update
+    3. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click the function menu Refresh to clear the data on the screen and return to the initial state.
+    4. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu Exit or close the window to end this operation
+后置条件
+Post condition
+完成的货物托盘可用叉车再置入立库入库输送机入库
+The finished article pallets can be re-placed into the warehouse by the forklift and stored in the conveyor.
+备注
+Remark
+
+
+
+
+
+        5.5. P080 Inventory Transfer库存移转
+
+
+作业目的
+Operation purpose
+改变货物属性
+Change article attributes
+说明
+Description
+由人工设定改变货物属性Stock Category
+Article attributes Stock Category can be changed manually
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+获得属性更改的指示
+Get an indication of a property change
+输入
+Input
+库存明细信息查询条件
+Inquiry conditions for inventory details
+输出
+Output
+更改库存明细信息属性
+Change inventory details properties
+异常处里
+Abnormal handle
+如果无符合条件的托盘明细数据，系统将提示查无可用库存明细信息，用户可执行Data Inquire-->Q080 Inventory Data Query作业查询库存明细信息；
+If there is no qualified pallet detail data, the system will prompt to check that there is no available inventory detail information. The user can perform Data Inquire-> Q080 Inventory Data Query job to query inventory detail information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件后点选Query查询托库存明细信息清单
+Enter the query conditions and click Query to query the inventory details list
+    2. 挑选要改变属性的数据行显示在下方编辑区，更改属性后点选Execute保存改变
+Select the data row whose attributes you want to change is displayed in the editing area below. After changing the attributes, click Execute to save the changes.
+    3. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click the function menu Refresh to clear the data on the screen and return to the initial state.
+    4. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu Exit or close the window to end this operation
+后置条件
+Post condition
+无
+Not applicable
+备注
+Remark
+限同一托盘明细行的属性改变；如果有部分改变，则需求先做P060 Transfer Out及P070 Pallet Inventory Adjustment后才能实施
+Only the attributes of the same pallet detail line can be changed; if there are partial changes, you need to do P060 Transfer Out and P070 Pallet Inventory Adjustment before implementing
+
+        5.6. P090 Palletizing of Empty Pallet空托盘码垛
+
+
+作业目的
+Operation purpose
+码垛空托盘入立库暂存
+Palletizing empty pallets into the AS/RS storage
+说明
+Description
+空托盘可堆叠入立体库暂存，需要绑定承载托盘码(父托盘)以便入库扫码识别
+Empty pallets can be stacked into the AS/RS storage. You need to bind the pallet code (parent pallet) to identify the code when entering the warehouse.
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+有未绑定货物的及未绑定父托盘的空托盘
+Empty pallets with unbound article and unbound parent pallet
+输入
+Input
+父托盘号及子托盘号
+Parent pallet number and child pallet number
+输出
+Output
+空托盘绑定明细
+Details of empty pallet binding
+异常处里
+Abnormal handle
+如果输入指定的空托盘并非空托盘或已绑定父托盘，系统将提示错误信息，用户可执行Data Inquire-->Q090 Location Usage Status Query作业查询空托盘所在储位；
+If the specified empty pallet is not an empty pallet or the parent pallet is bound, the system will prompt an error message, and the user can run the Data Inquire-> Q090 Location Usage Status Query job to query the storage location where the empty pallet is located;
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入父托盘号及子托盘号
+Enter the parent and child tray numbers
+    2. 点选功能菜单Add加入清单
+Click the function menu Add to add to the list
+    3. 点选功能菜单Execute可产生空托盘绑定明细
+Click the function menu Execute to generate empty pallet binding details
+    4. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click the function menu Refresh to clear the data on the screen and return to the initial state.
+    5. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu Exit or close the window to end this operation
+后置条件
+Post condition
+人员可将完成绑定父托盘的空托盘置入立库入库输送机
+Operator can place empty pallets that have been bound to the parent pallet into the inbound storage conveyor
+备注
+Remark
+已绑定父托盘的空托盘，如果没有入库，可仍可作为收货使用，但随即解绑整叠与父托盘绑定的关系。从立库出库的空托盘亦随即解绑整叠与父托盘绑定的关系
+The empty pallet that has been bound to the parent pallet can still be used as a receipt if it is not stored in the warehouse, but then the binding relationship between the entire stack and the parent pallet is unbound. The empty pallet from the AS/TS are unbound and the binding relationship between the stack and the parent pallet is immediately unbound.
+
+
+        5.7. P100 Empty Pallet Transfer Out空托盘出库
+
+
+作业目的
+Operation purpose
+从立库取出空托盘
+Retrieval empty pallets from AS/RS
+说明
+Description
+空托盘可堆叠入立体库暂存，需要时可执行此作业产生空托盘出库搬运命令
+Empty pallets can be stacked into the AS/RS storage. This operation can be performed when needed to generate empty pallets out of the AS/RS.
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+立库有暂存的空托盘
+AS/RS has empty pallets storage .
+输入
+Input
+指定的储位或需要的空托盘数量
+Specified storage bin location or number of empty pallets required
+输出
+Output
+空托盘出库搬运命令
+Empty pallet transfer out command
+异常处里
+Abnormal handle
+如果输入指定的空托盘储位并非空托盘储位，系统将提示查无空托盘储位信息，用户可执行Data Inquire-->Q090 Location Usage Status Query作业查询空托盘所在储位；或不指定空托盘储位，改输入需求空托盘数
+If the specified empty pallet storage bin location is not an empty pallet storage bin location, the system prompts that there is no empty pallet storage bin location information. The user can run the Data Inquire-> Q090 Location Usage Status Query job to query the storage bin location of the empty pallet; or do not specify an empty pallet storage bin location. Input pallet storage bin location quantity of empty pallets required
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入指定的空托盘所在储位或需要的空托盘数量二者只能输入一个
+Enter the designated empty pallet storage bin location or the required number of empty pallets. Only one can be entered.
+    2. 输入指定的空托盘所在储位就会清除需要的空托盘数量
+Entering the designated empty pallet storage bin location will clear the required number of empty pallets.
+    3. 输入需要的空托盘数量就会清除指定的空托盘所在储位
+Entering the required number of empty pallets will clear the storage bin location of the specified empty pallets
+    4. 点选功能菜单Query可显示空托盘暂存数据清单，并显示总储位数与总托盘数
+Click the function menu Query to display the empty pallet data list, and display the total storage bin location quantity and the total number of pallets.
+    5. 点选功能菜单Execute可产生空托盘出库搬运命令是否成功或失败的提示
+Click the function menu Execute to generate a prompt for the success or failure of the empty pallet transfer out command.
+    6. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click the function menu Refresh to clear the data on the screen and return to the initial state.
+    7. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu Exit or close the window to end this operation
+后置条件
+Post condition
+WCS执行空托盘出库搬运命令
+WCS executes empty pallet transfer out command
+备注
+Remark
+从立库出库的空托盘随即解绑整叠与父托盘绑定的关系
+The empty pallets delivered from the AS/RS are then unbound and the binding relationship between the stack and the parent pallet is untied
+
+
+    6. Data Maintenance数据维护作业
+
+        6.1. M070 AS/RS Transfer Command Maintain AS/RS搬运命令维护
+      作业目的
+Operation purpose
+AS/RS命令数据维护
+AS/RS transfer command data maintenance
+说明
+Description
+取消、强制完成或变更立库命令优先顺位
+Cancel, force completion, or change the priority order of the AS/RS transfer command
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+尚未开始执行立库出入库搬运命令的动作
+The action of the AS/RS transfer command has not been started
+输入
+Input
+命令信息的查询条件
+Query conditions for command information
+输出
+Output
+更新命令数据
+Update command data
+异常处里
+Abnormal handle
+如果无符合条件的出入库搬运命令数据，系统将提示查无命令信息，用户可执行Data Inquire-->Q070 AS/RS Transfer Command Query作业查询命令数据与状态；或挑选指定的命令号
+If there is no qualified command data for inbound and outbound storage, the system will prompt for no command information. The user can execute Data Inquire-> Q070 AS / RS Transfer Command Query to query the command data and status; or select the specified command number
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件后点选Query查询命令数据
+Enter query conditions and select Query command data
+    2. 点选Change Priority修改尚未执行命令的优先顺序，或在地上盘无法强制取消/完成执行异常命令时点选Force Cancel/End强制取消/完成执行中发生异常的命令。
+Click Change Priority to modify the priority order of the unexecuted commands, or click Force Cancel/End when the abnormal command cannot be forcibly cancelled/completed on the ground control panel.
+    3. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    4. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+无
+Not applicable
+备注
+Remark
+用户可执行Data Inquire--> Q070 AS/RS Transfer Command Query作业查询命令数据确认修改数据无误，或是在重覆操作步骤1确认
+The user can execute Data Inquire-> Q070 AS / RS Transfer Command Query to query the command data to confirm that the modified data is correct, or confirm in repeated operation step 1.
+
+
+
+
+
+
+
+        6.2. M090 Location Usage Status Maintain库位使用状态维护
+
+
+作业目的
+Operation purpose
+库位状态的维护
+Maintenance of bin location usage status
+说明
+Description
+当发现库位状态不正确时，可以做库位状态的修正
+When the bin location usage status is found to be incorrect, you can modify the bin location usage status
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+发生库位状态不对情况
+Incorrect situation of bin location usage status
+输入
+Input
+库位信息的查询条件
+Query conditions for bin location information
+输出
+Output
+更新库位状态
+Update bin location usage status
+异常处里
+Abnormal handle
+如果无符合条件的库位数据，系统将提示查无可用库位信息，用户可执行Data Inquire-->Q090 Location Usage Status Query作业查询库位数据与状态；或挑选指定的库位号
+If there is no eligible location data, the system will prompt that there is no available bin location information. The user can run the Data Inquire-> Q090 Location Usage Status Query job to query the bin location data and status; or select the specified bin location number
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入库存明细查询条件后点选Query查询库位数据
+Enter the inventory details query conditions and click Query to query the bin location data
+    2. 数据修改确认无误后点选Update修改库位状态，完成操作
+After confirming the data modification is correct, click Update to modify the status of the bin location and complete the operation.
+    3. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    4. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+用户可执行Data Inquire--> Q090 Location Usage Status Query作业查询库位数据确认修改数据无误，或是在重覆操作步骤1确认
+The user can execute Data Inquire-> Q090 Location Usage Status Query to query the bin location data to confirm that the modified data is correct, or confirm it in step 1
+
+
+    7. Physical Inventory Count盘点作业
+
+        7.1. C010 Physical Inventory Count自动仓库存盘点
+
+
+
+
+
+
+作业目的
+Operation purpose
+自动仓库位数据的盘点
+Physical inventory count of inventory data
+说明
+Description
+由立库发起的库位盘点
+Physical inventory count initiated by WES
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+货物已入库
+Article have been stored
+输入
+Input
+库存明细信息查询条件
+Inquiry conditions for inventory details
+输出
+Output
+托盘货物储存数据、更新盘点数据
+Pallet article storage data, update physical inventory count data
+异常处里
+Abnormal handle
+如果无符合条件的库位数据，系统将提示查无可盘点库位信息，用户可执行Data Inquire-->Q090 Location Usage Status Query作业查询库位数据与状态
+If there is no eligible inventory data, the system will prompt to check that there is no available inventory location information. The user can run the Data Inquire-> Q090 Location Usage Status Query job to query the inventory location data and status
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入库存明细查询条件后点选Query查询库位数据
+Enter the physical inventory count details query conditions and click Query to query the inventory data
+    2. 挑选要盘点的库位数据，点选Execute产生盘点命令数据并新增盘点数据
+Select the location data to be counted, click Execute to generate physical inventory count command data and add physical inventory count data
+    3. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    4. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+WCS执行立库出库搬运指令，人员盘点完后按作业完了按钮，进行盘点后回库命令
+WCS executes the inventory pallet transfer out command. After the physical inventory count is completed, the operator presses the job completion button, and WCS execute inventory pallet transfer in command.
+备注
+Remark
+
+
+        7.2. C030 Physical Inventory Count Record盘点数据记录
+
+
+
+
+
+
+作业目的
+Operation purpose
+盘点数量记录
+Physical inventory count quantity record
+说明
+Description
+记录实际盘点的数量
+Record the actual inventory count
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+已完成立库盘点搬运命令
+Completed the physical inventory count transfer out command
+输入
+Input
+盘点编号、实际盘点数量
+physical inventory count number, actual physical inventory count quantity
+输出
+Output
+托盘货物储存数据、更新盘点数据
+Pallet article storage data, update physical inventory count data
+异常处里
+Abnormal handle
+如果无符合条件的盘点数据，系统将提示查无可盘点信息
+If there is no eligible physical inventory count data, the system will prompt for no physical inventory count information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入盘点编号后点选Query查询盘点数据
+Enter the physical inventory count number and click Query to query the  physical inventory count data
+    2. 挑选已盘点后的数据，输入实际盘点数量
+Select the counted data and enter the actual count quantity
+    3. 点选Execute更新盘点数据
+Click Execute to update the physical inventory count data
+    4. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    5. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+点选Execute后，有审批授权者执行C040 PIC Difference Adjustment
+After clicking Execute, C040 PIC Difference Adjustment is performed by the authorized user
+备注
+Remark
+
+
+        7.3. C040 PIC Difference Adjustment盘点差异调整
+
+
+
+
+
+
+作业目的
+Operation purpose
+盘点后差异调整
+Difference adjustment after physical inventory count
+说明
+Description
+有审批权限者做差异数量的审批
+Those with approval authority do approval of different quantities
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+已完成盘点实际数量的记录
+Record of the actual quantity that has been counted
+输入
+Input
+盘点编号
+Physical inventory count number
+输出
+Output
+托盘货物储存数据、更新盘点数据
+Pallet article storage inventory data, update physical inventory count data
+异常处里
+Abnormal handle
+如果无符合条件的盘点数据，系统将提示查无可盘点信息
+If there is no eligible physical inventory count data, the system will prompt for no physical inventory count information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入盘点编号后点选Query查询盘点数据
+Enter the physical inventory count number and click Query to query the physical inventory count data
+    2. 挑选要审批的盘点数据
+Select the physical inventory count data to be approved
+    3. 点选Execute更新盘点数据完成审批
+Click Execute to update the physical inventory count data to complete the approval
+    4. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    5. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+已审批后的盘点数据无法再审批
+The approved physical inventory count data can no longer be approved
+
+    8. Data Inquire数据查询作业
+
+        8.1. Q010 Article Basic Data Query库存产品基本数据查询
+
+
+作业目的
+Operation purpose
+库存产品基本数据的查询
+Query article basic data
+说明
+Description
+可查询所有货物基本数据
+Can query all article basic data
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+SAP下传相关货物基本数据
+SAP downloads basic data of related articles
+输入
+Input
+Article No, GTIN No
+Article No, GTIN No
+输出
+Output
+库存产品基本数据
+article basic data
+异常处里
+Abnormal handle
+如果无符合条件的库存产品数据，系统将提示查无库存产品信息；
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选Article No后点选Query查询库存产品基本数据
+Enter query conditions or select Article No and click Query to query basic data of inventory products
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+
+
+
+        8.2. Q020 GTIN Basic Data Query产品替代包装单位基本数据查询
+
+
+作业目的
+Operation purpose
+产品替代包装单位基本数据的查询
+Query basic article alternative unit data
+说明
+Description
+可查询所有已下传的产品包装基本数据
+Query basic data of all article alternative unit
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+SAP下传相关产品包装基本数据
+SAP downloads basic data of related article alternative unit
+输入
+Input
+Article No, GTIN No
+Article No, GTIN No
+输出
+Output
+产品包装基本数据
+article alternative unit data
+异常处里
+Abnormal handle
+如果无符合条件的产品包装数据，系统将提示查无产品包装信息
+If there is no article alternative unit data that meets the requirements, the system will prompt to check that there is no article alternative unit information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选GTIN No后点选Query查询产品包装基本数据
+Enter query conditions or select GTIN No and click Query to query basic data of article alternative unit
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+
+
+
+        8.3. Q030 Storage Unit Type Basic Data Query储存载具基本数据查询
+
+
+作业目的
+Operation purpose
+存貨储存单元基本数据的查询
+Inquiry of basic data of inventory storage unit
+说明
+Description
+可查询所有已下传的存貨储存单元基本数据
+Query the basic data of all the inventory storage units that have been downloaded
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+SAP下传相关存貨储存单元基本数据
+SAP downloads basic data of relevant inventory storage units
+输入
+Input
+仓别代码、Article No
+Warehouse No., Article No.
+输出
+Output
+存貨储存单元基本数据
+Inventory storage unit data
+异常处里
+Abnormal handle
+如果无符合条件的存貨储存单元数据，系统将提示查无存貨储存单元信息
+If there is no eligible inventory storage unit data, the system will prompt to check that there is no such inventory storage unit information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选Article No后点选Query查询存貨储存单元基本数据
+Enter query conditions or select Article No and click Query to query the basic data of the inventory storage unit
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+
+
+        8.4. Q040 Transfer Requirement Data Query移转需求数据查询
+
+
+
+
+
+
+作业目的
+Operation purpose
+T/R数据的查询
+T/R data query
+说明
+Description
+可查询所有T/R数据
+Query all T/R data
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+SAP下传相关Transfer Requirement Data
+SAP download related Transfer Requirement Data
+输入
+Input
+Article No, GTIN No, Reqmt. No；或挑选指定的T/R数据
+Article No, GTIN No, Reqmt. No; or select specific T/R data
+输出
+Output
+T/R相关数据
+T/R related data
+异常处里
+Abnormal handle
+如果无符合条件的T/R数据，系统将提示查无此T/R信息
+If there is no eligible T/R data, the system will prompt to check that there is no such T/R information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选Article No后点选Query查询T/R数据
+Enter query conditions or select Article No and click Query to query T/R data
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+
+
+        8.5. Q050 Delivery Order Data Query交货单数据查询
+
+
+
+
+
+
+
+作业目的
+Operation purpose
+交货单数据的查询
+Inquiry of delivery order data
+说明
+Description
+可查询所有交货单数据
+Query all delivery order data
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+SAP下传相关交货单数据
+SAP download related delivery order data
+输入
+Input
+Delivery No、收货者、收货者名称；或挑选指定的Delivery No
+Delivery no, ship-to party, ship-to name; or pick a specific delivery no
+输出
+Output
+交货单数据
+delivery order data
+异常处里
+Abnormal handle
+如果无符合条件的交货单数据，系统将提示查无此交货单信息
+If there is no eligible delivery order data, the system will prompt to find no such delivery information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选Delivery No后点选Query查询交货单数据
+Enter query conditions or select delivery No. and click Query to query delivery order data
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+
+
+        8.6. Q060 Physical Inventory Count Data Query盘点单数据查询
+
+
+作业目的
+Operation purpose
+库存盘点数据查询
+Inquiry of physical inventory count data
+说明
+Description
+可查询所有库存盘点数据
+Query all physical inventory count data
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+货物已入库
+Article have been stored
+输入
+Input
+Article No, GTIN No, Reqmt. No；或挑选指定的article No
+Article No, GTIN No, Reqmt. No; or select a designated article No
+输出
+Output
+库存数据
+physical inventory count data
+异常处里
+Abnormal handle
+如果无符合条件的库存盘点数据，系统将提示查无此库存信息
+If there is no eligible physical inventory count data, the system will prompt that there is no such inventory information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选Article No后点选Query查询库存数据
+Enter query conditions or select Article No and click Query to query physical inventory count data
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+
+
+        8.7. Q070 AS/RS Transfer Command Data Query自动仓搬运命令查询
+
+
+作业目的
+Operation purpose
+命令数据的查询
+Query of command data
+说明
+Description
+可查询所有已完成和未完成的搬运命令数据
+Query all completed and unfinished handling order data
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+最近29,998笔内的命令数据
+Order data in the last 29,998 entries
+输入
+Input
+命令信息的查询条件
+Query conditions for command information
+输出
+Output
+命令数据
+Command data
+异常处里
+Abnormal handle
+如果无符合条件的命令数据，系统将提示查无此命令信息
+If there is no command data that meets the requirements, the system will prompt you to check for no command information.
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选Cmd. No后点选Query查询命令数据
+Enter query conditions or select Cmd. No and click Query to query command data
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+
+
+        8.8. Q080 Inventory Data Query库存数据查询
+
+
+作业目的
+Operation purpose
+库存数据的查询
+Inquiry of inventory data
+说明
+Description
+可查询产品在哪个库位及产品明细数据
+You can check the location and the details of the article
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+货物已入库
+Article have been stored
+输入
+Input
+库存信息的查询条件
+Search conditions for inventory information
+输出
+Output
+库存数据
+Inventory data
+异常处里
+Abnormal handle
+如果无符合条件的库存数据，系统将提示查无此库存信息
+If there is no eligible inventory data, the system will prompt that there is no such inventory information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选article No后点选Query查询库存数据
+Enter query conditions or select article No and click Query to query inventory data
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+
+
+        8.9. Q090 Location Usage Status Query库位使用状态查询
+
+
+
+
+作业目的
+Operation purpose
+库位状态的查询
+Query of storage shelf status
+说明
+Description
+可查询库位状态及产品明细数据
+Can query the status of the location and article details
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+不适用
+Not applicable
+输入
+Input
+库位信息的查询条件
+Query conditions for location information
+输出
+Output
+库存数据
+Inventory data
+异常处里
+Abnormal handle
+如果无符合条件的库位数据，系统将提示查无此库位信息
+If there is no eligible location data, the system will prompt you to find no such location information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件或挑选Loc. No后点选Query查询库位数据
+Enter query conditions or select Loc. No and click Query to query the location data
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+
+
+        8.10. Q100 Location Status Query库位状态查询
+
+作业目的
+Operation purpose
+库位状态的查询
+Query of storage shelf status
+说明
+Description
+可查询库位状态及产品明细数据
+Can query the status of the location 
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+不适用
+Not applicable
+输入
+Input
+库位信息的查询条件
+Query conditions for location information
+输出
+Output
+库为状态图
+Map of location status
+异常处里
+Abnormal handle
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    2. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+
+
+
+        8.11. Q110 Bin to Bin Transfer Query转储记录数据查询
+
+
+
+
+
+
+作业目的
+Operation purpose
+转储记录数据查询
+Query the log of bin to bin transfer
+说明
+Description
+可查询库位状态及产品明细数据
+Can query the status of the location and article details
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+不适用
+Not applicable
+输入
+Input
+库存信息的查询条件
+Query conditions for inventory information
+输出
+Output
+转储记录数据
+Bin to bin transfer log data
+异常处里
+Abnormal handle
+如果无符合条件的数据，系统将提示查无此库位信息
+If there is no eligible log data, the system will prompt you to find no such location information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件后点选Query查询库位数据
+Enter query conditions and click Query to query the location data
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+可以查看回报SAP状态
+You can view and report SAP status
+Q120 Posting Change Transfer Query库存属性移转查询
+
+
+
+
+作业目的
+Operation purpose
+库存属性移转记录数据查询
+Query the log of post change transfer
+说明
+Description
+可查询库存属性移转记录
+Can query the log of post change
+角色
+Roles
+仓管员
+Warehouse operator
+前置条件
+Precondition
+不适用
+Not applicable
+输入
+Input
+库存信息的查询条件
+Query conditions for inventory information
+输出
+Output
+转储记录数据
+Bin to bin transfer log data
+异常处里
+Abnormal handle
+如果无符合条件的数据，系统将提示查无此库位信息
+If there is no eligible log data, the system will prompt you to find no such location information
+如果因为网路中断产生的异常，须结束WES软件，请网路管理人员恢复网路后再重启WES
+If the WES software needs to be terminated due to an abnormality caused by a network interruption, ask the network administrator to restore the network and restart WES
+操作步骤
+Steps
+    1. 输入查询条件后点选Query查询库位数据
+Enter query conditions and click Query to query the location data
+    2. 点选功能菜单Refresh可清除画面上的数据回到初始状态
+Click refresh to clear the data on the screen and return to the initial state
+    3. 点选功能菜单Exit或关闭视窗可结束此作业
+Click the function menu exit or close window to end this job
+后置条件
+Post condition
+不适用
+Not applicable
+备注
+Remark
+可以查看回报SAP状态
+You can view and report SAP status
+
+    9. Report报表作业
+
+        9.1. R030 Daily Inbound Summary Report上架日报
+
+
+
+
+
+
+
+        9.2. R040 Daily Outbound Summary Report下架日报
+
+
+
+
+
+
+        9.3. R050 Stock Inquiry Report库存查询报表
+
+
+
+
+
+
+        9.4. R060 Stock Movement Pallet库存异动托盘数
+
+
+
+
+
+
+        9.5. R070 Stock Movement Transaction库存异动交易数
+
+
+
+
+
+
+        9.6. R080 Stock Counting Difference盘点差异
+
+
+
+
+
+
+
+

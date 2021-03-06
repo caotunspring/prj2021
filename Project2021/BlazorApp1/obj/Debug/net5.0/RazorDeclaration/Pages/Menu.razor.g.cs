@@ -141,7 +141,7 @@ using BlazorApp1.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 246 "D:\Project2021\Project2021\BlazorApp1\Pages\Menu.razor"
+#line 247 "D:\Project2021\Project2021\BlazorApp1\Pages\Menu.razor"
       
     string selectedTab = "MENU";
 

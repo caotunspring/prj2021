@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityManagerUI", "Identi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "IdentityManagerUI-master\WebApplication1\WebApplication1.csproj", "{4C7C4C0E-954A-408B-86CC-FCC0180B7D97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp2Lang", "WebApp2Lang\WebApp2Lang.csproj", "{9C0C2B3D-B6F0-4792-8F64-3BED2AC23159}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4C7C4C0E-954A-408B-86CC-FCC0180B7D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C7C4C0E-954A-408B-86CC-FCC0180B7D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C7C4C0E-954A-408B-86CC-FCC0180B7D97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0C2B3D-B6F0-4792-8F64-3BED2AC23159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0C2B3D-B6F0-4792-8F64-3BED2AC23159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0C2B3D-B6F0-4792-8F64-3BED2AC23159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0C2B3D-B6F0-4792-8F64-3BED2AC23159}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

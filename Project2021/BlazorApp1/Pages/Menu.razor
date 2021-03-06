@@ -13,7 +13,8 @@
 
 
 
-<h3> <a href="/"> <span class="oi oi-home" aria-hidden="true"></span></a> -  <span class="oi oi-list" aria-hidden="true"></span> Menu</h3>
+@*<h3> <a href="/"> <span class="oi oi-home" aria-hidden="true"></span></a> -  <span class="oi oi-list" aria-hidden="true"></span> Menu</h3>*@
+<h3> <a href="/"> <span class="oi oi-home" aria-hidden="true"></span></a> -   Menu</h3>
 
 
 <Tabs SelectedTab="@selectedTab" SelectedTabChanged="@OnSelectedTabChanged">
@@ -36,14 +37,14 @@
     <Content>
         <TabPanel Name="MENU">
 
-        @*    <h3><span @onclick="()=>ToggleNavMenu()">Menu</span></h3>*@
+            @*    <h3><span @onclick="()=>ToggleNavMenu()">Menu</span></h3>*@
 
             <div class="menu123456"> <span @onclick="()=>ToggleSubMenuX(1)">(1) P000 Process Executing 流程执行 </span></div>
             <GroupList IsExpand="@expandSubMenuX[1]" XList="@PageListP" programId="@Id" dir="@dir"></GroupList>
- 
+
             <div class="menu123456"> <span @onclick="()=>ToggleSubMenuX(2)">(2) M000 Data Maintenance 数据维护 </span></div>
             <GroupList IsExpand="expandSubMenuX[2]" XList="@PageListM" programId="@Id" dir="@dir"></GroupList>
-            
+
             <div class="menu123456">
                 <span @onclick="()=>ToggleSubMenuX(3)"> (3) C000 Physical Inventory Count 库存盘点 </span>
             </div>
@@ -74,11 +75,11 @@
             }
             else
             {
-            <div>
-                <span style="background-color:lightgray">
-                    <MenuDocTitle Title=@PageTitle></MenuDocTitle>
-                </span>
-            </div>   
+                <div>
+                    <span style="background-color:lightgray">
+                        <MenuDocTitle Title=@PageTitle></MenuDocTitle>
+                    </span>
+                </div>
                 @strHtml
             }
 
