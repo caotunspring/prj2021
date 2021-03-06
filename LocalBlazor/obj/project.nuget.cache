@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "SAusZUHaaR0+GY3MmglVHLp45k78k39reiwtazpli2OSJjVkzHHWbr4+BqyLewBAYzxdiSz45Oi8VD6fyvR4zg==",
+  "success": true,
+  "projectFilePath": "D:\\Project2021\\LocalBlazor\\LocalBlazor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.9\\microsoft.extensions.dependencyinjection.abstractions.3.1.9.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.localization\\3.1.9\\microsoft.extensions.localization.3.1.9.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\3.1.9\\microsoft.extensions.localization.abstractions.3.1.9.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.9\\microsoft.extensions.logging.abstractions.3.1.9.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.options\\3.1.9\\microsoft.extensions.options.3.1.9.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.9\\microsoft.extensions.primitives.3.1.9.nupkg.sha512"
+  ],
+  "logs": []
+}

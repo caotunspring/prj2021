@@ -82,6 +82,13 @@ using WebApp2Lang.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "D:\Project2021\Project2021\WebApp2Lang\Pages\Index.razor"
+using Microsoft.Extensions.Localization;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -90,6 +97,7 @@ using WebApp2Lang.Shared;
         {
         }
         #pragma warning restore 1998
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IStringLocalizer<App> Localizer { get; set; }
     }
 }
 #pragma warning restore 1591

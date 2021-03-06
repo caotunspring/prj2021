@@ -59,3 +59,10 @@ D:\Project2021\Project2021\WebApp2Lang\bin\Debug\net5.0\Microsoft.Extensions.Loc
 D:\Project2021\Project2021\WebApp2Lang\bin\Debug\net5.0\Microsoft.Extensions.Localization.Abstractions.dll
 D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\RazorDeclaration\Shared\ChooseLanguage.razor.g.cs
 D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\Razor\Shared\ChooseLanguage.razor.g.cs
+D:\Project2021\Project2021\WebApp2Lang\bin\Debug\net5.0\zh\WebApp2Lang.resources.dll
+D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\WebApp2Lang.csprojAssemblyReference.cache
+D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\WebApp2Lang.Resources.App.resources
+D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\WebApp2Lang.Resources.App.zh.tw.resources
+D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\WebApp2Lang.Resources.App.zh.resources
+D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\WebApp2Lang.csproj.GenerateResource.cache
+D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\zh\WebApp2Lang.resources.dll

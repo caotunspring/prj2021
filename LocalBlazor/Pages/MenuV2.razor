@@ -1,0 +1,30 @@
+﻿@page "/menuV2"
+@inject IStringLocalizer<App> Localizer
+
+<h1>Demo Multi-Language</h1>
+
+<hr />
+<div class="menu123456">
+    @DateTime.Now
+</div>
+<div class="menu123456">
+    @DateTime.Now.ToShortDateString()</div>
+<div class="menu123456">
+    @DateTime.Now.ToLongDateString()
+</div>
+
+<hr />
+<div class="menu123456">(1) P000 @Localizer["Process Executing"] 流程执行</div>
+<div class="menu123456">
+    (2) M000 @Localizer["Data Maintenance"] 数据维护
+</div>
+<div class="menu123456">
+    (3) C000 @Localizer["Physical Inventory Count"] 库存盘点
+</div>
+<div class="menu123456">
+    (4) Q000 @Localizer["Data Inquire"] 数据查询
+</div>
+<div class="menu123456">
+    (5) R000 @Localizer["Report"] 报表
+</div>
+<div class="menu123456">(6) S000 @Localizer["System Setting"] </div>

@@ -1,0 +1,54 @@
+﻿@page "/"
+@inject IStringLocalizer<App> Localizer
+
+<h1>Demo Multi-Language</h1>
+<h2>@selectedCulture => @selectedCultureName</h2>
+<hr />
+<div class="menu123456">
+    @DateTime.Now
+</div>
+<div class="menu123456">
+    @DateTime.Now.ToShortDateString()
+</div>
+<div class="menu123456">
+    @DateTime.Now.ToLongDateString()
+</div>
+
+<hr />
+<div class="menu123456">(1) P000 <span class="multi-lang">@Localizer["Process Executing"]</span> </div>
+<div class="menu123456">
+    (2) M000 <span class="multi-lang">@Localizer["Data Maintenance"]</span>
+</div>
+<div class="menu123456">
+    (3) C000 <span class="multi-lang">@Localizer["Physical Inventory Count"]</span>
+</div>
+<div class="menu123456">
+    (4) Q000 <span class="multi-lang">@Localizer["Data Inquire"]</span>
+</div>
+<div class="menu123456">
+    (5) R000 <span class="multi-lang">@Localizer["Report"]</span>
+</div>
+<div class="menu123456">(6) S000 <span class="multi-lang">@Localizer["System Setting"]</span> </div>
+
+@code
+{
+    private string selectedCulture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+    private string selectedCultureName;
+
+
+    protected override void OnInitialized()
+    {
+        var langDic = new Dictionary<string, string>()
+        {
+            { "th-TH","Thai" },
+            {"en-US", "English" },
+            {"zh-CN", "Chinese" }
+
+        };
+
+        selectedCultureName = langDic[selectedCulture];
+
+    }
+
+
+}

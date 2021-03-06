@@ -319,6 +319,11 @@
         "runtime": {
           "WebApp2Lang.dll": {}
         },
+        "resources": {
+          "zh/WebApp2Lang.resources.dll": {
+            "locale": "zh"
+          }
+        },
         "compile": {
           "WebApp2Lang.dll": {}
         }
