@@ -10,7 +10,6 @@ D:\Project2021\Project2021\WebApp2Lang\bin\Debug\net5.0\ref\WebApp2Lang.dll
 D:\Project2021\Project2021\WebApp2Lang\bin\Debug\net5.0\WebApp2Lang.pdb
 D:\Project2021\Project2021\WebApp2Lang\bin\Debug\net5.0\WebApp2Lang.Views.dll
 D:\Project2021\Project2021\WebApp2Lang\bin\Debug\net5.0\WebApp2Lang.Views.pdb
-D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\WebApp2Lang.csprojAssemblyReference.cache
 D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\WebApp2Lang.GeneratedMSBuildEditorConfig.editorconfig
 D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\WebApp2Lang.AssemblyInfoInputs.cache
 D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\WebApp2Lang.AssemblyInfo.cs
@@ -58,3 +57,5 @@ D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\WebApp2Lang.genruntimeco
 D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\WebApp2Lang.csproj.CopyComplete
 D:\Project2021\Project2021\WebApp2Lang\bin\Debug\net5.0\Microsoft.Extensions.Localization.dll
 D:\Project2021\Project2021\WebApp2Lang\bin\Debug\net5.0\Microsoft.Extensions.Localization.Abstractions.dll
+D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\RazorDeclaration\Shared\ChooseLanguage.razor.g.cs
+D:\Project2021\Project2021\WebApp2Lang\obj\Debug\net5.0\Razor\Shared\ChooseLanguage.razor.g.cs
